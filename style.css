@@ -96,6 +96,7 @@ a {
     padding:40px 100px;
     margin:0px -100px;
     top:0px;
+    font-family:'Source Sans Pro', sans-serif;
     text-align:center;
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0));
     text-transform:uppercase;
@@ -147,7 +148,8 @@ a {
     margin-top:-140px;}
 
 .mini-menu {
-	display:inline-block;
+    font-family:'Source Sans Pro', sans-serif;
+    display:inline-block;
     line-height:20px;
     height:20px;
     padding:20px;
@@ -196,6 +198,7 @@ a {
     top:-7px;}
 
 .contentbox {
+    font-family:'Source Sans Pro', sans-serif;
     position:relative;
     margin:0px auto;
     background:#fff;
