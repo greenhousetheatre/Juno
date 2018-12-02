@@ -175,9 +175,9 @@ a {
     -o-transition: all 0.4s linear;
     transition: all 0.4s linear;}
 	.mini-menu:hover .more-links.alpha {
-	height:183px;}
+	height:163px;}
 	.mini-menu:hover .more-links.bravo {
-	height:182px;}
+	height:162px;}
 	.is-sticky .mini-menu .more-links {
 	margin-top:20px;}
 	.more-links a {
