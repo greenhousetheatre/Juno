@@ -43,6 +43,19 @@ a {
 	height:500px;
 	display:block;}
 
+
+/* Embed google map of location 
+
+Workshop
+Nine shows
+Music
+
+Title
+Date / Time / Price
+Background
+Cast / Crew
+Map */
+
 .greet {
 	display:block;
 	position:absolute;
@@ -54,7 +67,7 @@ a {
 	background-attachment:absolute;
 	background-position:center center;
     background-size:cover;
-    background-image:url("https://scontent.fman2-2.fna.fbcdn.net/v/t1.0-9/46473971_2197181420522829_3039794572969377792_n.jpg?_nc_cat=111&_nc_ht=scontent.fman2-2.fna&oh=c1a4d553e33193e104969eb740bd08c3&oe=5C6C0A10");}
+    background-image:url("http://25.media.tumblr.com/d6b339e77f2766ee2ad0a2adc51dbc0b/tumblr_mxnyu0Tcho1r16dnho3_1280.jpg");}
     /*
     http://25.media.tumblr.com/d6b339e77f2766ee2ad0a2adc51dbc0b/tumblr_mxnyu0Tcho1r16dnho3_1280.jpg — abandoned greenhouse
     https://assets.atlasobscura.com/article_images/lg/45518/image.jpg  actual greenhouse*/
@@ -203,6 +216,10 @@ a {
     margin:0px auto;
     background:#fff;
     z-index:0;}
+    .contentbox.work-music {
+    padding-top:1px;
+    z-index:1;
+    background:#efefef;}
 
 /* Panel Content and Styles for Unique Panels */
 .panel {
@@ -236,6 +253,8 @@ a {
     margin-top:0px;}
     .panel p:last-child {
     margin-bottom:0px;}
+    .panel.workshops {
+    background:#efefef;}
 .textbox {
     position:relative;
     display:block;
@@ -272,6 +291,14 @@ a {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;}
+    .event-header {
+    padding:30px;
+    width:calc(100% - 40px);
+    height:auto;
+    position:relative;
+    overflow:hidden;
+    font-size:2em;
+    float:left;}
    	.event img {
     position:relative;
     display:block;
