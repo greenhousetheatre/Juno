@@ -38,7 +38,6 @@ a {
     -o-border-radius:3px;
     border-radius:3px;}
 
-
 .marshmallow {
 	height:500px;
 	display:block;}
@@ -66,8 +65,11 @@ Map */
 	background:#000;
 	background-attachment:absolute;
 	background-position:center center;
-    background-size:cover;
+    background-size:cover;}
+    .greet.first {
     background-image:url("https://i.imgur.com/fe6KAl0.jpg");}
+    .greet.second {
+    background-image:url("https://i.imgur.com/lxXwk58.jpg");}
     /*
     http://25.media.tumblr.com/d6b339e77f2766ee2ad0a2adc51dbc0b/tumblr_mxnyu0Tcho1r16dnho3_1280.jpg — abandoned greenhouse
     https://assets.atlasobscura.com/article_images/lg/45518/image.jpg  actual greenhouse*/
@@ -214,12 +216,12 @@ Map */
     font-family:'Source Sans Pro', sans-serif;
     position:relative;
     margin:0px auto;
-    background:#fff;
+    background:#efefef;
     z-index:0;}
     .contentbox.work-music {
     padding-top:1px;
     z-index:1;
-    background:#efefef;}
+    background:#fff;}
 
 /* Panel Content and Styles for Unique Panels */
 .panel {
@@ -229,13 +231,13 @@ Map */
     width:auto;
     margin:0px auto 80px auto;
     font-size:1.35em;
-    background:#ddd;}
+    background:#fff;}
     .notpanel {
     z-index:2;
     width:calc(100vw - 160px);
     padding-bottom:80px;
     margin:80px 80px 0px 80px;
-    background:#fff;}
+    background:#efefef;}
     @media only screen and (max-width: 800px) {
 	    .notpanel {
 	    width:calc(100vw - 200px);
@@ -254,7 +256,7 @@ Map */
     .panel p:last-child {
     margin-bottom:0px;}
     .panel.workshops {
-    background:#efefef;}
+    background:#fff;}
 .textbox {
     position:relative;
     display:block;
@@ -292,7 +294,7 @@ Map */
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;}
     .event-header {
-    padding:30px;
+    padding:5px 0px 30px 0px;
     width:calc(100% - 40px);
     height:auto;
     position:relative;

@@ -2,7 +2,7 @@
 
 <title>The Greenhouse Theatre</title>
     
-    <link rel="shortcut icon" href="https://i.imgur.com/UhXErmN.png"/>
+    <link rel="shortcut icon" href="https://i.imgur.com/qA1WgW0.png"/>
     <link rel="stylesheet" type="text/css" href="style.css"/>
 
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700" rel="stylesheet" type='text/css'/>
@@ -24,6 +24,13 @@
   			layoutMode: 'fitRows',
             itemSelector: '.event'
         });
+    });
+    </script>
+    <script>
+    $(function(){
+    $(".swap").on("click", function() {
+        $(".greet").toggleClass("first, second");
+    });
     });
     </script>
 
@@ -60,7 +67,7 @@ body {
 <body>
 
 <!-- Preface type info -->
-	<div class="marshmallow">
+<div class="marshmallow">
 	<div id="navbar" class="stick">
 	    <div class="mini-menu how"><div class="no how">What's On</div>
 	    	<div class="more-links alpha">
@@ -92,13 +99,13 @@ body {
             </div></div>
 	    <a class="no" href="#">Blog</a>
 	    <a class="no" href="#">Contact Us</a>
+        <a class="no swap" href="#">Change Background</a>
 	</div>
-	<div class="greet">
+	<div class="greet first">
 	<div id="headerbar">
 	    <div class="username" style="display:none"><div style="float:left">THE</div><br>GREENHOUSE <div style="float:right">THEATRE</div></div>
 	</div></div>
-
-	</div>
+</div>
 
 <div class="contentbox">
 	<div class="panel"><div class="textbox one">
