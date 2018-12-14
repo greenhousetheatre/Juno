@@ -17,7 +17,7 @@
 
 
 <!-- Isotope is from https://isotope.metafizzy.co/ -->
-    <script src="https://static.tumblr.com/6hsqxdt/QBym35odk/jquery.masonry.js"></script><script src="https://static.tumblr.com/fuu6t9w/eubml0pm0/jquery.isotope.min.js"></script><script type="text/javascript" src="jquery.fancy.js"></script>
+    <script src="https://static.tumblr.com/6hsqxdt/QBym35odk/jquery.masonry.js"></script><script src="https://static.tumblr.com/fuu6t9w/eubml0pm0/jquery.isotope.min.js"></script>
     <script>
     $(function(){
         $('.notpanel').isotope({
@@ -39,6 +39,12 @@
             }, 1000);
         return false;}
         } }); });
+    </script>
+    <script>
+    $(function(){
+    $(".swap").on("click", function() {
+        $(".greet").toggleClass("first, second");
+    });
     </script>
 	
 <style type="text/css">
