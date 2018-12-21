@@ -1,0 +1,252 @@
+<style type="text/css">
+
+body {
+    margin:0px;
+    padding:0px;
+    background-color:#000;
+    font-size: 62.5%;
+    line-height:150%;
+    letter-spacing:0.2px;
+    font-family:'Source Sans Pro', sans-serif;
+    color:#000;
+  	overflow-y: scroll;
+  	overflow-x: hidden;}
+
+a {
+    color:#6CDBE7;
+    text-decoration:none;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;}
+    a:hover {
+    color:#555;
+    cursor:help;
+    text-decoration:none;}    
+
+#s-m-t-tooltip {
+    position:absolute;
+    margin:15px 10px;
+    padding:2px 6px;
+    z-index:99999999999999;
+    font-size:1.1em;
+    color:#fff;
+    font-family:'Source Sans Pro', sans-serif;
+    background:#222;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    -o-border-radius:3px;
+    border-radius:3px;}
+
+/* Floating Navigation Bar, Associated Styling, Scrolling Target Tags */
+#navbar {
+    display:block;
+    position:fixed;
+    line-height:20px;
+    z-index:99999;
+    padding:20px 100px;
+    left:0px;
+    right:0px;
+    top:0px;
+    background:#000;
+    font-family:'Source Sans Pro', sans-serif;
+    text-align:center;
+    text-transform:uppercase;
+    font-size:1.6em;}
+    .no {
+    position:relative;
+    letter-spacing:0.5px;
+    line-height:20px;
+    display:inline-block;
+    margin:0px 30px;
+    color:#fff;}
+    .no:hover {
+    color:#fff;}
+    .no:after {
+    position:absolute;
+    content:"";
+    background:#fff;
+    z-index:-1;
+    top:-22px;
+    height:2px;
+    left:0px;
+    width:100%;
+    opacity:0;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    transition: all 0.4s linear;}
+    .no:hover:after {
+    opacity:1;
+    top:-7px;}
+
+.mini-menu {
+    font-family:'Source Sans Pro', sans-serif;
+    display:inline-block;
+    line-height:20px;
+    height:20px;
+    padding:20px;
+    margin:-20px;
+    position:relative;}
+	.break {
+	display:block;
+	margin:0 auto;
+	height:1px;
+	background:#000;}
+
+.more-links {
+	height:0px;
+	position:absolute;
+	left:50%;
+	margin-left:-70px;
+	width:140px;
+	margin-top:20px;
+    background:rgba(0,0,0,0.85);
+	overflow:hidden;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    transition: all 0.4s linear;}
+	.mini-menu:hover .more-links.alpha {
+	height:163px;}
+	.mini-menu:hover .more-links.bravo {
+	height:162px;}
+    .mini-menu:hover .more-links.charlie {
+    height:123px;}
+	.is-sticky .mini-menu .more-links {
+	margin-top:20px;}
+	.more-links a {
+    color:#fff;
+	display:block;
+	padding:10px 0px;
+	position:relative;
+	font-size:0.8em;}
+	.more-links a:hover {
+	background:#000;}
+	.how {
+	cursor:default;}
+	.how:hover .no:after {
+    opacity:1;
+    top:-12px;
+    width:100%;}
+	.is-sticky .how:hover .no:after {
+    top:-7px;}
+
+.spacer {
+    padding-top:100px;
+    background:red;
+    display:block;
+    position:relative;
+    height:100px;
+    width:100%;
+    z-index:1000;
+    background:#000;
+    background-attachment:fixed;
+    background-position:center center;
+    background-size:cover;
+    background-image:url("https://i.imgur.com/lxXwk58.jpg");}
+
+.contentbox {
+    font-family:'Source Sans Pro', sans-serif;
+    position:relative;
+    margin:0px auto;
+    background:#fff;
+    z-index:0;}
+
+/* Panel Content and Styles for Unique Panels */
+.textbox {
+    position:relative;
+    display:block;
+    z-index:0;
+    font-size:1.35em;
+    text-align:center;
+    padding:50px 100px;
+    margin:0 auto;
+    line-height:175%;
+    max-width:50vw;}
+.textbox p {
+    position:relative;
+    height:auto;
+    margin:10px 0px;}
+    .panel p:first-child {
+    margin-top:0px;}
+    .panel p:last-child {
+    margin-bottom:0px;}
+
+.header {
+    line-height:150%;
+    position:relative;
+    margin-bottom:25px;
+    font-size:1.5em;
+    text-align:center;
+    font-family:'Source Sans Pro', sans-serif;
+	font-style:italic;}
+
+.person {
+    position:relative;
+    display:block;
+    padding:30px 0px;
+    min-height:126px;
+    border-bottom:2px solid #ccc;}
+    .person:last-of-type {
+    border-bottom:none;}
+    .person img {
+    width:100px;
+    border-radius:50%;
+    border:10px solid #ccc;
+    padding:3px;}
+    .person.left {
+    text-align:left;}
+    .person.left img {
+    float:left;
+    margin-right:13px;}
+    .person.right {
+    text-align:right;}
+    .person.right img {
+    float:right;
+    margin-left:13px;}
+    .person-name {
+    font-weight:bold;
+    font-size:1.25em;
+    margin-bottom:12px;
+    }
+    .person-role {
+    display:inline-block;
+    font-style:italic;
+    }
+
+/* Credit Panel and End Hover Animation */
+.credits {
+    position:relative;
+    display:block;
+ 	background:#000;
+    padding:40px 40px;
+    height:20px;
+    line-height:20px;
+    color:#fff;
+    text-align:left;
+    font-size:13px;}
+    .star {
+    position:absolute;
+    display:block;
+    color:transparent;
+    top:35px;
+    left:calc(50% - 15px);
+    border-radius:50%;
+    width:19px;
+    padding-left:1px;
+    height:20px;
+    line-height:21px;
+    text-align:center;
+    box-shadow: 4px 3px 0px 0px #fff;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    transition: all 0.4s linear;}
+    .credits:hover .star {
+    top:40px;
+    color:#fff;
+    left:calc(50% - 10px);
+    box-shadow: 0px 0px 0px 1px #fff;}
+
+</style>
