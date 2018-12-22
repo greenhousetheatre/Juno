@@ -208,12 +208,39 @@ a {
     .person-name {
     font-weight:bold;
     font-size:1.25em;
-    margin-bottom:12px;
-    }
+    margin-bottom:12px;}
     .person-role {
     display:inline-block;
-    font-style:italic;
-    }
+    font-style:italic;}
+
+.textbox.mission p {
+    margin-bottom:40px;}
+.numbered {
+    text-align:left;
+    font-size:1.25em;
+    margin-bottom:10px;}
+    .numbered b {
+    font-weight:700;}
+    .numbered-text {
+    text-align:left;
+    position:relative;
+    padding-left:20px;
+    border-left:2px solid #ddd;
+    margin-left:20px;}
+    .numbered-text:after {
+    content:"";
+    width:2px;
+    height:0%;
+    top:0px;
+    left:-2px;
+    position:absolute;
+    background:#aaa;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;}
+    .numbered-text:hover:after {
+    height:100%;}
 
 /* Credit Panel and End Hover Animation */
 .credits {
