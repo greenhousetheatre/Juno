@@ -109,6 +109,12 @@ a {
     transition: all 0.4s linear;}
 	.mini-menu:hover .more-links.alpha {
 	height:163px;}
+    .more-links.alpha:hover {
+    overflow:visible;
+    -webkit-transition-delay:0.4s;
+    -moz-transition-delay:0.4s;
+    -o-transition-delay:0.4s;
+    transition-delay:0.4s;}
 	.mini-menu:hover .more-links.bravo {
 	height:162px;}
     .mini-menu:hover .more-links.charlie {
@@ -117,6 +123,7 @@ a {
 	margin-top:20px;}
 	.more-links a {
     color:#fff;
+    cursor:help;
 	display:block;
 	padding:10px 0px;
 	position:relative;
@@ -131,6 +138,21 @@ a {
     width:100%;}
 	.is-sticky .how:hover .no:after {
     top:-7px;}
+.second-menu {
+    position:absolute;
+    display:block;
+    overflow:hidden;
+    top:41px;
+    left:140px;
+    width:160px;
+    height:0px;
+    background:rgba(0,0,0,0.85);
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    transition: all 0.4s linear;}
+    .second-menu-wrapper:hover .second-menu {
+    height:368px;}
 
 .spacer {
     padding-top:100px;
