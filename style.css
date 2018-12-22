@@ -190,6 +190,8 @@ Map */
 	height:163px;}
 	.mini-menu:hover .more-links.bravo {
 	height:162px;}
+    .mini-menu:hover .more-links.charlie {
+    height:123px;}
 	.is-sticky .mini-menu .more-links {
 	margin-top:20px;}
 	.more-links a {
