@@ -24,6 +24,11 @@ a {
     cursor:help;
     text-decoration:none;}    
 
+b {
+    font-weight:700 !important;}
+i {
+    font-style:italic !important;}
+
 #s-m-t-tooltip {
     position:absolute;
     margin:15px 10px;
@@ -59,7 +64,11 @@ a {
     line-height:20px;
     display:inline-block;
     margin:0px 30px;
-    color:#fff;}
+    color:#fff;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    transition: all 0.4s linear;}
     .no:hover {
     color:#fff;}
     .no:after {
@@ -154,6 +163,21 @@ a {
     .second-menu-wrapper:hover .second-menu {
     height:368px;}
 
+
+    @media only screen and (max-width: 1000px) {
+        .no, .mini-menu {
+        background:#333;
+        width:140px;
+        height:auto;}
+        .no:after {
+        display:none;}
+        .no:hover {
+        color:#aaa;}
+        .more-links {
+        background:#333;
+        position:relative;}
+    }
+
 .spacer {
     padding-top:100px;
     background:red;
@@ -186,6 +210,9 @@ a {
     margin:0 auto;
     line-height:175%;
     max-width:50vw;}
+    @media only screen and (max-width: 800px) {
+        .textbox {
+        max-width:75vw;}}
 .textbox p {
     position:relative;
     height:auto;
@@ -263,6 +290,103 @@ a {
     transition: all 0.5s ease;}
     .numbered-text:hover:after {
     height:100%;}
+
+.box {
+    position:relative;
+    display:block;
+    margin:20px auto;
+    text-align:left;
+    background:#ddd;
+    border-radius:5px;
+    overflow:hidden;}
+    .box p {
+    position:relative;
+    height:auto;
+    margin:10px 0px;}
+    .box p:last-child {
+    margin-bottom:0px;}
+    .box p:first-child {
+    margin-top:0px;}
+    
+.time-slot {
+    position:relative;
+    cursor:help;
+    background:#c0c0c0;
+    padding:25px;
+    text-transform:uppercase;
+    text-align:left;
+    color:#fff;
+    line-height:20px;
+    font-size:1.25em;
+    color:#fff;
+    background:#333;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    transition: all 0.4s linear;}
+    .time-slot:after {
+    content:"";
+    position:absolute;
+    top:25px;
+    right:-20px;
+    z-index:1000;
+    height:20px;
+    width:20px;
+    display:block;
+    background:#fff;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    transition: all 0.4s linear;}
+    .time-slot:hover:after, .time-slot.banana:after {
+    right:20px;}
+    .mini {
+    font-style:italic;
+    letter-spacing:.5px;
+    position:relative;
+    line-height:20px;}
+    
+.box-content {
+    display:none;}
+.details {
+    overflow:hidden;
+    height:51px;}
+    @media only screen and (max-width: 600px) {
+        .details {
+        height:101px;}}
+    .fact {
+    display:inline-block;
+    float:left;
+    margin:-1px;
+    width:calc(50% - 40px);
+    padding:15px 20px;
+    line-height:20px;
+    color:#000;
+    text-align:center;
+    border:1px solid #333;
+    background:#aaa;}
+    @media only screen and (max-width: 600px) {
+        .fact {
+        width:calc(100% - 20px);}}
+.description {
+    position:relative;
+    padding:25px;
+    line-height:160%;}
+
+/* Individual box styling */
+.box.tempest .time-slot {
+    background:#40587c;}
+    .box.tempest .fact {
+    border:1px solid #40587c;
+    background:#a4b1c4;}
+.box.permanence .time-slot {
+    background:#5e7c40;}
+    .box.permanence .fact {
+    border:1px solid #5e7c40;
+    background:#b8c4a4;}
 
 /* Credit Panel and End Hover Animation */
 .credits {
