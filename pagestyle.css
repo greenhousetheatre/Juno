@@ -324,16 +324,9 @@ i {
     -moz-transition: all 0.4s linear;
     -o-transition: all 0.4s linear;
     transition: all 0.4s linear;}
-    .time-slot:after {
+    .time-slot:before, .time-slot:after {
     content:"";
     position:absolute;
-    top:25px;
-    right:-20px;
-    z-index:1000;
-    height:20px;
-    width:20px;
-    display:block;
-    background:#fff;
     -webkit-border-radius:50%;
     -moz-border-radius:50%;
     border-radius:50%;
@@ -341,8 +334,26 @@ i {
     -moz-transition: all 0.4s linear;
     -o-transition: all 0.4s linear;
     transition: all 0.4s linear;}
+    .time-slot:after {
+    height:0px;
+    width:0px;
+    top:34px;
+    right:29px;
+    z-index:1000;
+    display:block;
+    background:#fff;}
     .time-slot:hover:after, .time-slot.banana:after {
+    height:20px;
+    width:20px;
+    top:25px;
     right:20px;}
+    .time-slot:before {
+    height:24px;
+    width:24px;
+    border:2px solid white;
+    z-index:1001;
+    top:21px;
+    right:16px;}
     .mini {
     font-style:italic;
     letter-spacing:.5px;
