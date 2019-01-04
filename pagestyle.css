@@ -105,8 +105,8 @@ i {
 	height:0px;
 	position:absolute;
 	left:50%;
-	margin-left:-80px;
-	width:160px;
+	margin-left:-70px;
+	width:140px;
 	margin-top:20px;
     background:rgba(0,0,0,0.85);
 	overflow:hidden;
@@ -145,36 +145,74 @@ i {
     width:100%;}
 	.is-sticky .how:hover .no:after {
     top:-7px;}
-.second-menu {
-    position:absolute;
-    display:block;
-    overflow:hidden;
-    top:41px;
-    left:140px;
-    width:160px;
-    height:0px;
-    background:rgba(0,0,0,0.85);
-    -webkit-transition: all 0.4s linear;
-    -moz-transition: all 0.4s linear;
-    -o-transition: all 0.4s linear;
-    transition: all 0.4s linear;}
-    .second-menu-wrapper:hover .second-menu {
-    height:368px;}
-
 
     @media only screen and (max-width: 1000px) {
+        #navbar {
+        padding-top:0px;
+        padding-left:90px;
+        padding-right:10px;
+        padding-bottom:25px;
+        right:auto;
+        bottom:0px;
+        text-align:left;
+        display:none;}
         .no, .mini-menu {
-        background:#333;
-        width:140px;
+        padding:10px 0px 0px 0px;
+        width:200px;
+        margin:0px;
+        display:block;
         height:auto;}
+        .no.dontlookatme {
+        padding-top:25px;}
         .no:after {
         display:none;}
         .no:hover {
         color:#aaa;}
+        .no.how:hover {
+        color:#fff;}
         .more-links {
-        background:#333;
+        margin:0px;
+        left:0%;
+        width:auto;
         position:relative;}
+        .more-links a {
+        font-size:0.75em;
+        text-transform:lowercase;
+        display:inline-block;
+        padding:0px 10px 0px 0px;}
+        .more-links a:hover {
+        color:#aaa;}
+        .break, .yeet {
+        display:none;}
+
+        .more-links.alpha, .more-links.bravo, .more-links.charlie {
+        height:auto !important;}
+
+        .clicky {
+        position:fixed;
+        top:20px;
+        left:20px;
+        z-index:999999;
+        width:40px;
+        height:40px;
+        line-height:40px;
+        background:#000;
+        border-radius:50%;
+        border:2px solid #fff;
+        color:#fff;
+        text-align:center;
+        font-size:3em;
+        cursor:help;
+        -webkit-transition: all 0.4s linear;
+        -moz-transition: all 0.4s linear;
+        -o-transition: all 0.4s linear;
+        transition: all 0.4s linear;
+        }
+        .clicky:hover {
+        background:transparent;
+        }
     }
+
 
 .spacer {
     padding-top:100px;
@@ -206,8 +244,8 @@ i {
     padding:50px 100px;
     margin:0 auto;
     line-height:175%;
-    max-width:50vw;}
-    @media only screen and (max-width: 800px) {
+    max-width:60vw;}
+    @media only screen and (max-width: 900px) {
         .textbox {
         max-width:75vw;}}
 .textbox p {
@@ -328,10 +366,6 @@ i {
     width:calc(70% - 100px);
     display:inline-block;
     padding:20px 25px;}
-    .ws-label .mini {
-    text-transform:none;
-    font-size:0.85em;
-    padding-top:15px;}
     .time-slot {
     cursor:help;}
     .time-slot:before, .time-slot:after {
@@ -362,20 +396,24 @@ i {
     border:2px solid white;
     z-index:1001;
     top:50%;
-    margin-top:-14.5px;
+    margin-top:-14px;
     right:16px;}
     .mini {
     font-style:italic;
     letter-spacing:.5px;
     position:relative;
-    line-height:20px;}
+    line-height:20px;
+    text-transform:none;
+    font-size:0.85em;}
+    .ws-label .mini {
+    padding-top:15px;}
     
 .box-content {
     display:none;}
 .details {
     overflow:hidden;
     height:51px;}
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 750px) {
         .details {
         height:101px;}}
     .fact {
@@ -389,7 +427,7 @@ i {
     text-align:center;
     border:1px solid #888;
     background:#ccc;}
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 750px) {
         .fact {
         width:calc(100% - 20px);}}
 .description {
@@ -397,13 +435,29 @@ i {
     padding:25px;
     line-height:160%;}
 
+/* Styling schedule tables (cast/crew) */
+.box table {
+    width:50%;
+    position:relative;
+    display:inline-block;}
+    .box table.crew {
+    float:right;}
+    @media only screen and (max-width: 750px) {
+        .box table {
+        width:100%;}
+        .box table.crew {
+        margin-top:10px;
+        float:none;}
+        .box table tr.empty {
+        display:none;}
+    }
 .box table td {
     position:relative;
     z-index:1;}
     .box table td:nth-of-type(1), .box table td:nth-of-type(4) {
     padding-right:5px;
     width:120px;}
-    .box table i {
+.box table i {
     position:relative;
     display:inline-block;}
     .box table i:before, .box table i:after {
@@ -421,7 +475,7 @@ i {
     width:100%;
     padding-right:5px;
     height:20px;
-    background-color:#ddd;
+    background-color:#ccc;
     display:inline-block;
     margin-top:-10px;
     z-index:-1;}
