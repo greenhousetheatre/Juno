@@ -244,10 +244,13 @@ i {
     padding:50px 100px;
     margin:0 auto;
     line-height:175%;
-    max-width:60vw;}
-    @media only screen and (max-width: 900px) {
+    max-width:50vw;}
+    @media only screen and (max-width: 1000px) {
         .textbox {
         max-width:75vw;}}
+    @media only screen and (max-width: 750px) {
+        .textbox {
+        padding:50px 50px;}}
 .textbox p {
     position:relative;
     height:auto;
@@ -411,15 +414,11 @@ i {
 .box-content {
     display:none;}
 .details {
-    overflow:hidden;
-    height:51px;}
-    @media only screen and (max-width: 750px) {
-        .details {
-        height:101px;}}
+    overflow:hidden;}
     .fact {
     display:inline-block;
     float:left;
-    margin:-1px;
+    margin:-1px -1px 0px -1px;
     width:calc(50% - 40px);
     padding:15px 20px;
     line-height:20px;
@@ -429,7 +428,7 @@ i {
     background:#ccc;}
     @media only screen and (max-width: 750px) {
         .fact {
-        width:calc(100% - 20px);}}
+        width:calc(100% - 40px);}}
 .description {
     position:relative;
     padding:25px;
