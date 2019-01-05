@@ -205,8 +205,6 @@ Map */
 
     /* Making the navbar into a side panel upon resizing and yes it is as big of a disaster as this section title suggests */
     @media only screen and (max-width: 1000px) {
-        .is-sticky, .stick {
-        width:auto !important;}
         #navbar {
         padding:80px 30px 30px 30px;
         width:200px;
@@ -476,6 +474,10 @@ Map */
     left:calc(50% - 10px);
     box-shadow: 0px 0px 0px 1px #fff;}
 
+@media only screen and (max-width: 1000px) {
+        .is-sticky, .stick {
+        width:auto !important;}}
+
 @media only screen and (max-width: 800px) {
     #navbar {
     padding-top:120px;
@@ -499,10 +501,10 @@ Map */
         height:80px;
         line-height:80px;
         font-size:5em;}
-    } 
     #navbar, .no, .mini-menu {
     width:350px;
     line-height:150%;}
+    } 
 
 /* adding colors bc im a lazy butt */
 .first {
