@@ -182,8 +182,6 @@ Map */
     height:162px;}
     .mini-menu:hover .more-links.charlie {
     height:123px;}
-    .is-sticky .mini-menu .more-links {
-    margin-top:20px;}
     .more-links a {
     color:#fff;
     cursor:help;
@@ -199,11 +197,17 @@ Map */
     opacity:1;
     top:-12px;
     width:100%;}
+
+.is-sticky .mini-menu .more-links {
+    margin-top:20px;}
     .is-sticky .how:hover .no:after {
     top:-7px;}
 
     /* Making the navbar into a side panel upon resizing and yes it is as big of a disaster as this section title suggests */
     @media only screen and (max-width: 1000px) {
+        .is-sticky, .stick {
+        width:auto !important;
+        }
         #navbar {
         padding:80px 30px 30px 30px;
         width:200px;
@@ -220,7 +224,8 @@ Map */
         #navbar.clicked {
         left:0px;}
         body.clicked {
-        padding-left:260px;}
+        margin-right:-260px;
+        margin-left:260px;}
         .no, .mini-menu {
         padding:0px 0px 0px 0px;
         width:200px;
@@ -272,12 +277,7 @@ Map */
         -o-transition: all 0.4s linear;
         transition: all 0.4s linear;}
         .clicky:hover {
-        background:transparent;}
-    }
-@media only screen and (max-width: 700px) {
-        body.clicked {
-        padding-left:0px;}
-    }
+        background:transparent;}}
 .contentbox {
     font-family:'Source Sans Pro', sans-serif;
     position:relative;
@@ -496,5 +496,12 @@ Map */
         line-height:80px;
         font-size:5em;}
     }
-
+    
+/* adding colors bc im a lazy butt */
+.first {
+    background-color:#808bba;}
+.second, .clicky.clicked {
+    background-color:#985f6f;}
+.third, .clicky.clicked:hover {
+    background-color:#4e4c67;}
 </style>
