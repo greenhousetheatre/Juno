@@ -16,7 +16,6 @@
         });
     </script>
 
-
 <!-- Isotope is from https://isotope.metafizzy.co/ -->
     <script src="https://static.tumblr.com/6hsqxdt/QBym35odk/jquery.masonry.js"></script><script src="https://static.tumblr.com/fuu6t9w/eubml0pm0/jquery.isotope.min.js"></script>
     <script>
@@ -46,6 +45,17 @@
     $(".swap").on("click", function() {
         $(".greet").toggleClass("first, second");
     });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".time-slot").click(function() {
+                $(this).closest(".box").find(".box-content").slideToggle();
+                $(this).toggleClass("banana"); 
+            }); 
+            $(".clicky").click(function() {
+                $(".clicky, body, #navbar").toggleClass("clicked");
+            }); 
+        }); 
     </script>
 	
 <style type="text/css">
