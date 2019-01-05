@@ -8,6 +8,19 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700" rel="stylesheet" type='text/css'/>
     <link href='https://static.tumblr.com/wb7siqo/Omqnia97g/cssnormalize.css' rel='stylesheet' type='text/css'/><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://static.tumblr.com/nbzz8rs/07Xnyp7cq/jquery.sticky.js" type="text/javascript"></script>
+    <script>
+    	$(document).ready(function(){
+        	$(".time-slot").click(function() {
+            	$(this).closest(".box").find(".box-content").slideToggle();
+            	$(this).toggleClass("banana"); 
+            }); 
+        	$(".clicky").click(function() {
+            	$(".clicky, body, #navbar").toggleClass("clicked");
+            }); 
+        }); 
+    </script>
+
 <style type="text/css">
 body {
     margin:0px;
@@ -19,7 +32,11 @@ body {
     font-family:'Source Sans Pro', sans-serif;
     color:#000;
 	overflow-y: scroll;
-	overflow-x: hidden;}
+	overflow-x: hidden;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    transition: all 0.4s linear;}
 </style></head>
  
 <body>
@@ -54,6 +71,7 @@ body {
 	    <a class="no" href="/Juno/blog">Blog</a>
 	    <a class="no" href="/Juno/contact">Contact</a>
 	</div>
+	<div class="clicky first">+</div>
 
 <div class="spacer"></div>
 
@@ -64,43 +82,43 @@ body {
 	    </div>
 	    <p>Say hello to the workshops of the Greenhouse Theatre! We are all very excited to show you these wonderful things because lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. All workshops are free to attend and will be held at Some Location.</p>
 
-	    <div class="box tempest">
-			<div class="ws-label"><b>How to Train a Dragon</b><div class="mini">August 3-8<br>12:30–13:30</div></div>
+	    <div class="box first">
+			<div class="ws-label first"><b>How to Train a Dragon</b><div class="mini">August 3-8<br>12:30–13:30</div></div>
 			<div class="ws description">
 			    <p>Come to the Endless Void to learn crucial life skills, such as how to train a dragon (no affiliation with Dreamworks). Please bring your own dragons. The Greenhouse Theatre is not liable for any burns, mysterious vanishings, bites (venomous or otherwise), stings, cuts, or falls. </p>
 			</div>
 		</div>
 
-	    <div class="box permanence">
-			<div class="ws-label"><b>Recycling Efficiently</b><div class="mini">August 9-12<br>13:45–14:45</div></div>
+	    <div class="box second">
+			<div class="ws-label second"><b>Recycling Efficiently</b><div class="mini">August 9-12<br>13:45–14:45</div></div>
 			<div class="ws description">
 			    <p>A community ecology approach to the study of the most common group of zooxanthellae, dinoflagellates in the genus Symbiodinium, was applied to symbiotic invertebrate assemblages on coral reefs in the western Caribbean, off the Yucatan peninsula and over 1000 km away in the northeastern Caribbean, at Lee Stocking Island, Bahamas.</p>
 			</div>
 		</div>
 
-	    <div class="box tilt">
-			<div class="ws-label"><b>Writing for the Theatre</b><div class="mini">August 13-15<br>15:00–15:30</div></div>
+	    <div class="box third">
+			<div class="ws-label third"><b>Writing for the Theatre</b><div class="mini">August 13-15<br>15:00–15:30</div></div>
 			<div class="ws description">
 			    <p>Tropical marine ecosystems possess the highest diversity and abundance of epibenthic invertebrates that contain zooxanthellae. Dinoflagellates in the genus <i>Symbiodinium</i> represent the most common group of these photosynthetic endosymbionts, and their presence contributes substantially to the productivity, survival, and success of their hosts.</p>
 			</div>
 		</div>
 
-	    <div class="box islands">
-			<div class="ws-label"><b>Never Cook Souffles</b><div class="mini">August 15-18<br>15:45–16:15</div></div>
+	    <div class="box first">
+			<div class="ws-label first"><b>Never Cook Souffles</b><div class="mini">August 15-18<br>15:45–16:15</div></div>
 			<div class="ws description">
 			    <p>The presence of intragenomic variation or paralogous loci were inferred where migration differences between co-occurring bands could be attributed to minor sequence variation. These are believed to result when differences in ribosomal repeats have not been homogenized by concerted evolution.</p>
 			</div>
 		</div>
 
-	    <div class="box daphne">
-			<div class="ws-label"><b>Introduction to Sanskrit</b><div class="mini">August 19-22<br>16:30–17:30</div></div>
+	    <div class="box second">
+			<div class="ws-label second"><b>Introduction to Sanskrit</b><div class="mini">August 19-22<br>16:30–17:30</div></div>
 			<div class="ws description">
 			    <p>Symbiodinium spp. Phylogenetic reconstructions of ITS 2 genes from lineage B types based on an alignment of 317 characters using maximum parsimony. Type B1 (‘Symbiodinium pulchrorum’/‘S. burmudense’) was the only cultured isolate identified in natural populations. It is also the most prevalent symbiont found among different host species.</p>
 			</div>
 		</div>
 
-	    <div class="box swallows">
-			<div class="ws-label"><b>Time Management for Time Travellers</b><div class="mini">January 15<br>17:45–18:45</div></div>
+	    <div class="box third">
+			<div class="ws-label third"><b>Time Management for Time Travellers</b><div class="mini">January 15<br>17:45–18:45</div></div>
 			<div class="ws description">
 			    <p>It is evident that some Symbiodinium spp. show marked zonation with respect to environmental gradients (Rowan and Knowlton 1995; Baker 1999; LaJeunesse and Trench 2000) and that these distribution patterns seem to be due to differences in physiology. The findings of this study confirm that Symbiodinium spp. of clade A are shallow-water specialists.</p>
 			</div>

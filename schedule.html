@@ -16,7 +16,7 @@
             	$(this).toggleClass("banana"); 
             }); 
         	$(".clicky").click(function() {
-            	$("#navbar").slideToggle();
+            	$(".clicky, body, #navbar").toggleClass("clicked");
             }); 
         }); 
     </script>
@@ -32,14 +32,18 @@ body {
     font-family:'Source Sans Pro', sans-serif;
     color:#000;
 	overflow-y: scroll;
-	overflow-x: hidden;}
+	overflow-x: hidden;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    transition: all 0.4s linear;}
 </style></head>
  
 <body>
 
 <!-- Preface type info -->
 	<div id="navbar" class="stick">
-	    <a class="no dontlookatme" href="/Juno">Home</a>
+	    <a class="no" href="/Juno">Home</a>
 	    <div class="mini-menu how"><div class="no how">What's On</div>
 	    	<div class="more-links charlie">
 	    		<a href="/Juno/schedule">Schedule</a>
@@ -67,7 +71,7 @@ body {
 	    <a class="no" href="/Juno/blog">Blog</a>
 	    <a class="no" href="/Juno/contact">Contact</a>
 	</div>
-	<div class="clicky">+</div>
+	<div class="clicky first">+</div>
 
 <div class="spacer"></div>
 
@@ -78,8 +82,8 @@ body {
 	    </div>
 	    <p>Say hello to the major productions of the Greenhouse Theatre! We are all very excited to show you these wonderful things because lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
 
-	    <div class="box permanence">
-			<div class="time-slot"><b>Object Permanence</b>
+	    <div class="box">
+			<div class="time-slot first"><b>Object Permanence</b>
 				<div class="mini">August 2-26, 13:45–14:45</div></div>
 			<div class="box-content">
 			    <div class="details">
@@ -125,8 +129,8 @@ body {
 			</div></div>
 		</div>
 
-	    <div class="box tilt">
-			<div class="time-slot"><b>The Tilt of the Earth</b>
+	    <div class="box">
+			<div class="time-slot second"><b>The Tilt of the Earth</b>
 				<div class="mini">August 2-26, 15:00–15:30</div></div>
 			<div class="box-content">
 			    <div class="details">
@@ -172,8 +176,8 @@ body {
 			</div></div>
 		</div>
 
-	    <div class="box islands">
-			<div class="time-slot"><b>The Islands</b>
+	    <div class="box">
+			<div class="time-slot third"><b>The Islands</b>
 				<div class="mini">August 2-12, 15:45–16:15</div></div>
 			<div class="box-content">
 			    <div class="details">
@@ -185,8 +189,8 @@ body {
 			</div></div>
 		</div>
 
-	    <div class="box islands">
-			<div class="time-slot"><b>A Higher Power</b>
+	    <div class="box">
+			<div class="time-slot third"><b>A Higher Power</b>
 				<div class="mini">August 14-28, 15:45–16:15</div></div>
 			<div class="box-content">
 			    <div class="details">
@@ -198,8 +202,8 @@ body {
 			</div></div>
 		</div>
 
-	    <div class="box daphne">
-			<div class="time-slot"><b>Daphne & Apollo</b>
+	    <div class="box">
+			<div class="time-slot first"><b>Daphne & Apollo</b>
 				<div class="mini">August 2-28, 16:30–17:30</div></div>
 			<div class="box-content">
 			    <div class="details">
@@ -211,9 +215,22 @@ body {
 			</div></div>
 		</div>
 
-	    <div class="box swallows">
-			<div class="time-slot"><b>Swallows</b>
+	    <div class="box">
+			<div class="time-slot second"><b>Swallows</b>
 				<div class="mini">August 2-28, 17:45–18:45</div></div>
+			<div class="box-content">
+			    <div class="details">
+			        <div class="fact">Written by Catherine Buchanan</div>
+			        <div class="fact">Directed by Angela Rose</div>
+			    </div>
+			<div class="description">
+			    <p>The swallows, martins and saw-wings, or Hirundinidae, are a family of passerine birds found around the world on all continents, including occasionally in Antarctica. Highly adapted to aerial feeding, they have a distinctive appearance. There are around 90 species of Hurundinidae, divided into 19 genera, with the greatest diversity found in Africa, which is also thought to be where they evolved as hole-nesters. They also occur on a number of oceanic islands. A number of European and North American species are long-distance migrants; by contrast, the West and South African swallows are non-migratory.</p>
+			</div></div>
+		</div>
+
+	    <div class="box">
+			<div class="time-slot third"><b>Shellshocked!</b>
+				<div class="mini">August 2-28, 19:00-20:00</div></div>
 			<div class="box-content">
 			    <div class="details">
 			        <div class="fact">Written by Catherine Buchanan</div>
