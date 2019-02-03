@@ -15,11 +15,17 @@
             	$(this).closest(".box").find(".box-content").slideToggle();
             	$(this).toggleClass("banana"); 
             }); 
-        	$(".clicky").click(function() {
-            	$(".clicky, body, #navbar").toggleClass("clicked");
-            }); 
         }); 
     </script>
+
+    <script>
+		$(document).ready(function() {
+    		$(".clickmenu").click(function() {
+        		$(".red, .orange, .yellow").toggleClass("spin"); 
+        		$("#navbar, .clickmenu, body").toggleClass("clicked");
+			});
+    	});
+	</script>
 
 <style type="text/css">
 body {
@@ -70,8 +76,11 @@ body {
             </div></div>
 	    <a class="no" href="/Juno/blog">Blog</a>
 	    <a class="no" href="/Juno/contact">Contact</a>
-	</div>
-	<div class="clicky first">+</div>
+	</div>    <div class="clickmenu">
+        <div class="line red"></div>
+        <div class="line orange"></div>
+        <div class="line yellow"></div>
+    </div>
 
 <div class="spacer"></div>
 
