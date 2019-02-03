@@ -11,6 +11,15 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+    <script>
+		$(document).ready(function() {
+    		$(".clickmenu").click(function() {
+        		$(".red, .orange, .yellow").toggleClass("spin"); 
+        		$("#navbar, .clickmenu, body").toggleClass("clicked");
+			});
+    	});
+	</script>
+
 <!-- Isotope is from https://isotope.metafizzy.co/ -->
     <script src="https://static.tumblr.com/6hsqxdt/QBym35odk/jquery.masonry.js"></script><script src="https://static.tumblr.com/fuu6t9w/eubml0pm0/jquery.isotope.min.js"></script>
     <script>
@@ -20,17 +29,6 @@
             itemSelector: '.event'
         });
     });
-    </script>
-    <script>
-        $(document).ready(function(){
-            $(".time-slot").click(function() {
-                $(this).closest(".box").find(".box-content").slideToggle();
-                $(this).toggleClass("banana"); 
-            }); 
-            $(".clicky").click(function() {
-                $(".clicky, body, #navbar").toggleClass("clicked");
-            }); 
-        }); 
     </script>
 	
 <style type="text/css">
@@ -83,17 +81,19 @@ body {
             </div></div>
         <a class="no" href="/Juno/blog">Blog</a>
         <a class="no" href="/Juno/contact">Contact</a>
+    </div>    
+    <div class="clickmenu">
+        <div class="line red"></div>
+        <div class="line orange"></div>
+        <div class="line yellow"></div>
     </div>
-    <div class="clicky first">+</div>
 	<div class="greet">
 	<div id="headerbar">
-	    <div class="username" style="display:none"><div style="float:left">THE</div><br>GREENHOUSE <div style="float:right">THEATRE</div></div>
 	</div></div>
 </div>
 
 <div class="contentbox">
 	<div class="panel"><div class="textbox one">
-	    <div id="about" class="tag"></div>
 	        <div class="header">
 	            And, long story short—
 	        </div>
@@ -107,7 +107,6 @@ body {
 
 <!-- Actual content -->
 	<div class="panel notpanel">
-	    <div id="playlist" class="tag"></div>
             <div class="event event-header">
                 Shows
             </div>
@@ -151,7 +150,6 @@ body {
     </div>
 <div class="contentbox work-music">
     <div class="panel notpanel workshops">
-        <div id="playlist" class="tag"></div>
             <div class="event event-header">
                 Workshops & Music
             </div>
