@@ -42,15 +42,6 @@ a {
 	height:500px;
 	display:block;}
 
-
-/* Embed google map of location 
-
-Title
-Date / Time / Price
-Background
-Cast / Crew
-Map */
-
 .greet {
 	display:block;
 	position:absolute;
@@ -63,26 +54,6 @@ Map */
 	background-position:center center;
     background-size:cover;
     background-image:url("https://i.imgur.com/8KbJ5CL.jpg");}
-
-#headerbar {
-    display:block;
-    z-index:99999;
-    position:absolute;
-    padding:30px 0px;
-    height:120px;
-    line-height:40px;
-    width:310px;
-    top:50%;
-    margin-top:-90px;
-    left:50%;
-    margin-left:-155px;
-    text-align:center;}
-    .username {
-	cursor:default;
-    text-transform:uppercase;
-    color:#fff;
-    font-size:5em;
-    font-weight:bold;}
 
 /* Floating Navigation Bar, Associated Styling, Scrolling Target Tags */
 #navbar {
@@ -189,111 +160,6 @@ Map */
     top:-7px;}
 
     /* Making the navbar into a side panel upon resizing and yes it is as big of a disaster as this section title suggests */
-    @media only screen and (max-width: 750px) {
-        #navbar {
-        padding:80px 30px 30px 30px;
-        width:200px;
-        right:auto;
-        left:-260px;
-        height:100%;
-        bottom:0px;
-        overflow:hidden;
-        text-align:left;
-        -webkit-transition: all 0.4s linear;
-        -moz-transition: all 0.4s linear;
-        -o-transition: all 0.4s linear;
-        transition: all 0.4s linear;}
-        #navbar.clicked {
-        left:0px;}
-        body.clicked {
-        margin-right:-260px;
-        margin-left:260px;}
-        .no, .mini-menu {
-        padding:0px 0px 0px 0px;
-        width:200px;
-        margin:0px;
-        display:block;
-        height:auto;}
-        .no {
-        padding:20px 0px 0px 0px;}
-        .no:after {
-        display:none;}
-        .no:hover {
-        color:#aaa;}
-        .no.how:hover {
-        color:#fff;}
-        .more-links {
-        margin:0px;
-        left:0%;
-        width:auto;
-        position:relative;}
-        .more-links a {
-        font-size:0.8em;
-        text-transform:lowercase;
-        display:inline-block;
-        padding:0px 10px 0px 0px;}
-        .more-links a:hover {
-        color:#aaa;}
-        .break, .yeet {
-        display:none;}
-
-        .more-links.alpha, .more-links.bravo, .more-links.charlie {
-        height:auto !important;}
-
-        .clickmenu {
-            z-index:10000000000000001;
-            position:fixed;
-            top:25px;
-            left:30px;
-            width:35px;
-            cursor:help;
-            height:25px;
-            display:inline-block;}
-            .clickmenu.clicked {
-            background:transparent;}
-            .clickmenu.clicked .line {
-            background:#fff;}
-            .clickmenu.clicked .orange {
-            background:black;
-            opacity:0;}
-            .line {
-            display:block;
-            position:absolute;
-            background:#fff;
-            height:6px;
-            width:45px;
-            border:2px solid #000;
-            cursor:help;
-            -webkit-border-radius:4px;
-            -moz-border-radius:4px;
-            -ms-border-radius:4px;
-            -o-border-radius:4px;
-            border-radius:4px;
-            -webkit-transition: all .3s ease;
-            -moz-transition: all .3s ease;
-            -o-transition: all .3s ease;
-            transition: all .3s ease;}
-            .orange {
-            margin-top:12px;}
-            .yellow {
-            margin-top:24px;}
-            .red.spin {
-            margin-top:14px;
-            -webkit-transform: rotate(45deg);
-            -moz-transform: rotate(45deg);
-            -o-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            transform: rotate(45deg);}
-            .orange.spin {
-            margin-top:5px;
-            opacity:0;}
-            .yellow.spin {
-            margin-top:14px;
-            -webkit-transform: rotate(-45deg);
-            -moz-transform: rotate(-45deg);
-            -o-transform: rotate(-45deg);
-            -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);}}
 
 .contentbox {
     font-family:'Source Sans Pro', sans-serif;
@@ -457,21 +323,113 @@ Map */
 .third, .clicky.clicked:hover {
     background-color:#4e4c67;}
 
+ @media only screen and (max-width: 900px) {
+        #navbar {
+        padding:80px 30px 30px 30px;
+        width:200px;
+        right:auto;
+        left:-260px;
+        height:100%;
+        bottom:0px;
+        overflow:hidden;
+        text-align:left;
+        -webkit-transition: all 0.4s linear;
+        -moz-transition: all 0.4s linear;
+        -o-transition: all 0.4s linear;
+        transition: all 0.4s linear;}
+        #navbar.clicked {
+        left:0px;}
+        body.clicked {
+        margin-right:-260px;
+        margin-left:260px;}
+        .no, .mini-menu {
+        padding:0px 0px 0px 0px;
+        width:200px;
+        margin:0px;
+        display:block;
+        height:auto;}
+        .no {
+        padding:20px 0px 0px 0px;}
+        .no:after {
+        display:none;}
+        .no:hover {
+        color:#aaa;}
+        .no.how:hover {
+        color:#fff;}
+        .more-links {
+        margin:0px;
+        left:0%;
+        width:auto;
+        position:relative;}
+        .more-links a {
+        font-size:0.8em;
+        text-transform:lowercase;
+        display:inline-block;
+        padding:0px 10px 0px 0px;}
+        .more-links a:hover {
+        color:#aaa;}
+        .break, .yeet {
+        display:none;}
 
-@media only screen and (max-width: 750px) {
-    .event {
-    margin:0px;}
-    .charimg {
-    width:calc(100% / 3);}
-    .wideimg {
-    width:100%;}
-    .doubleimg {
-    width:50%;}
-    .ch-center {
-    font-size:1.6vw;}
-    .ch-name {
-    font-size:2vw;} 
+        .more-links.alpha, .more-links.bravo, .more-links.charlie {
+        height:auto !important;}
 
+        .clickmenu {
+            z-index:10000000000000001;
+            position:fixed;
+            top:25px;
+            left:30px;
+            width:35px;
+            cursor:help;
+            height:25px;
+            display:inline-block;}
+            .clickmenu.clicked {
+            background:transparent;}
+            .clickmenu.clicked .line {
+            background:#fff;}
+            .clickmenu.clicked .orange {
+            background:black;
+            opacity:0;}
+            .line {
+            display:block;
+            position:absolute;
+            background:#fff;
+            height:6px;
+            width:45px;
+            border:2px solid #000;
+            cursor:help;
+            -webkit-border-radius:4px;
+            -moz-border-radius:4px;
+            -ms-border-radius:4px;
+            -o-border-radius:4px;
+            border-radius:4px;
+            -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease;}
+            .orange {
+            margin-top:12px;}
+            .yellow {
+            margin-top:24px;}
+            .red.spin {
+            margin-top:14px;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);}
+            .orange.spin {
+            margin-top:5px;
+            opacity:0;}
+            .yellow.spin {
+            margin-top:14px;
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);}}
+
+@media only screen and (max-width: 900px) {
     #navbar {
     padding-top:50px;
     font-size:2.3em;
@@ -489,13 +447,26 @@ Map */
     .notpanel {
     width:calc(100vw - 100px);
     padding-bottom:50px;
-    margin:50px 50px 0px 50px;}}
+    margin:50px 50px 0px 50px;}
 
-@media only screen and (max-width: 900px) {
+    .event {
+    margin:0px;}
+    .charimg {
+    width:calc(100% / 3);}
+    .wideimg {
+    width:100%;}
+    .doubleimg {
+    width:50%;}
+    .ch-center {
+    font-size:1.6vw;}
+    .ch-name {
+    font-size:2vw;} 
+
     .textbox {
     max-width:none;
     padding:50px;
     font-size:1.6em;}
     .box {
     font-size:0.8em;}}
+
 </style>
