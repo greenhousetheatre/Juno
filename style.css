@@ -189,7 +189,7 @@ Map */
     top:-7px;}
 
     /* Making the navbar into a side panel upon resizing and yes it is as big of a disaster as this section title suggests */
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 750px) {
         #navbar {
         padding:80px 30px 30px 30px;
         width:200px;
@@ -383,15 +383,6 @@ Map */
     width:calc(100% - 40px);}
 	.doubleimg {
     width:calc(50% - 40px);}
-    @media only screen and (max-width: 800px) {
-    	.event {
-    	margin:0px;}
-		.charimg {
-	    width:calc(100% / 3);}
-		.wideimg {
-	    width:100%;}
-		.doubleimg {
-	    width:50%;}}
 .char {
     display:block;
     font-size:0.9em;
@@ -422,11 +413,6 @@ Map */
     font-size:1.4vw;
     text-transform:uppercase;
     padding-left:0px;}
-    @media only screen and (max-width: 800px) {
-	    .ch-center {
-	    font-size:1.6vw;}
-	    .ch-name {
-	    font-size:2vw;} }
 
 
 /* Credit Panel and End Hover Animation */
@@ -463,7 +449,29 @@ Map */
     left:calc(50% - 10px);
     box-shadow: 0px 0px 0px 1px #fff;}
 
-@media only screen and (max-width: 900px) {
+/* adding colors bc im a lazy butt */
+.first {
+    background-color:#808bba;}
+.second, .clicky.clicked {
+    background-color:#985f6f;}
+.third, .clicky.clicked:hover {
+    background-color:#4e4c67;}
+
+
+@media only screen and (max-width: 750px) {
+    .event {
+    margin:0px;}
+    .charimg {
+    width:calc(100% / 3);}
+    .wideimg {
+    width:100%;}
+    .doubleimg {
+    width:50%;}
+    .ch-center {
+    font-size:1.6vw;}
+    .ch-name {
+    font-size:2vw;} 
+
     #navbar {
     padding-top:50px;
     font-size:2.3em;
@@ -471,12 +479,6 @@ Map */
     body.clicked {
     margin-right:-410px;
     margin-left:410px;}
-    .textbox {
-    max-width:none;
-    padding:50px;
-    font-size:1.6em;}
-    .box {
-    font-size:0.8em;}
     .credits {
     font-size:1.4em;}
     .credits .star {
@@ -489,11 +491,11 @@ Map */
     padding-bottom:50px;
     margin:50px 50px 0px 50px;}}
 
-/* adding colors bc im a lazy butt */
-.first {
-    background-color:#808bba;}
-.second, .clicky.clicked {
-    background-color:#985f6f;}
-.third, .clicky.clicked:hover {
-    background-color:#4e4c67;}
+@media only screen and (max-width: 900px) {
+    .textbox {
+    max-width:none;
+    padding:50px;
+    font-size:1.6em;}
+    .box {
+    font-size:0.8em;}}
 </style>
