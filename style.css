@@ -22,7 +22,10 @@ a {
     a:hover {
     color:#555;
     cursor:help;
-    text-decoration:none;}    
+    text-decoration:none;}   
+
+i {
+    font-style:italic;}
 
 #s-m-t-tooltip {
     position:absolute;
@@ -38,15 +41,76 @@ a {
     -o-border-radius:3px;
     border-radius:3px;}
 
+
+.shield {
+    position:fixed;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    z-index:9999999999999;
+    color:#fff;
+    font-size:1.5em;
+    line-height:150%;
+    text-align:center;}
+    .shield.bye {
+    bottom:auto;}
+    .shield-panel {
+    z-index:9999999999999;
+    background:#000;
+    height:100%;
+    width:50%;
+    overflow:hidden;
+    position:fixed;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;}
+    .shield-panel.left {
+    left:0%;}
+    .shield-panel.right {
+    right:0%;}
+    .shield-panel.left.moveleft {
+    left:-50%;}
+    .shield-panel.right.moveright {
+    right:-50%;}
+    .shield-logo {
+    width:50px;
+    border-radius:50%;}
+    .shield-title {
+    font-size:1.3em;
+    padding:1.5em 0em;
+    font-weight:bold;}
+    .shield-content {
+    position:absolute;
+    width:70%;
+    top:50%;
+    -webkit-transform:translate(0%,-50%);
+    -ms-transform:translate(0%,-50%);
+    transform:translate(0%,-50%);}
+    .shield-content.left {
+    right:-35%;}
+    .shield-content.right {
+    left:-35%;}
+    .closetab {
+    margin-top:1.9em;
+    padding:15px 20px;
+    display:inline-block;
+    border:3px solid #fff;
+    color:#fff !important;
+    font-weight:bold;
+    font-size:1.1em;}
+
+
 .marshmallow {
-	height:440px;
+	height:560px;
     background:#efefef;
 	display:block;}
 
 .greet {
 	display:block;
 	position:absolute;
-	top:60px;
+	margin-top:60px;
 	height:500px;
 	width:100%;
 	z-index:1000;
@@ -239,7 +303,11 @@ a {
     margin:0 auto;
     opacity:0.95;
     width:100%;
-    max-height:auto;}
+    max-height:auto;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;}
 	.charimg {
     width:calc(33.3% - 40px);}
 	.wideimg {

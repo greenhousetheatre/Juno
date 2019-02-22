@@ -17,9 +17,10 @@
         		$(".red, .orange, .yellow").toggleClass("spin"); 
         		$("#navbar, .clickmenu, body").toggleClass("clicked");
 			});
-    		$(".opensite").click(function() {
-        		$(".left").addClass("moveleft"); 
-        		$(".right").addClass("moveright");
+    		$(".shield").click(function() {
+        		$(".shield-panel.left").addClass("moveleft"); 
+        		$(".shield-panel.right").addClass("moveright");
+                $(this).addClass("bye");
 			});
     	});
 	</script>
@@ -58,17 +59,19 @@ body {
 
 <div class="shield">
 	<div class="shield-panel left">
-		<div class="shield-content">
-			<img src="" class="shield-logo">
-			<div class="shield-title">A performance venue. A community space. A Greener Fringe.</div>
-			<div class="shield-description">The Greenhouse is a zero-waste performance venue at the heart of the Edinburgh Fringe. Creating and hosting 8 shows – from storytelling to family theatre, dance to straight drama – all inviting you to discuss the environment, and our relationship to it. Our programme of workshops provide a fun and practical space to explore implementing sustainability in to artistic practice or daily life. Environmental events plus live music every night creates a relaxed space to unwind and share thoughts with other artists. This project is about a sense of community – and generating grassroots, artist-led change towards a more sustainable future. So what are you waiting for? Come on in.</div>
+		<div class="shield-content left">
+			<!--<img src="https://www.immersionrecovery.com/wp-content/uploads/2018/10/best-twitter-bird-transparent-background-esec-fse-2017-twitter-bird-transparent-background.png" class="shield-logo">-->
+			<div class="shield-title">A performance venue. A community space.<br><i>A Greener Fringe</i>.</div>
+			<div class="shield-description">The Greenhouse is a zero-waste performance venue at the heart of the Edinburgh Fringe. Creating and hosting 8 shows – from storytelling to family theatre, dance to straight drama – all inviting you to discuss the environment, and our relationship to it. Our programme of workshops provide a fun and practical space to explore implementing sustainability in to artistic practice or daily life. Environmental events plus live music every night creates a relaxed space to unwind and share thoughts with other artists. This project is about a sense of community – and generating grassroots, artist-led change towards a more sustainable future. So what are you waiting for?
+                <br><a class="closetab">Come on in.</a></div>
 		</div>
 	</div>
 	<div class="shield-panel right">
-		<div class="shield-content">
-			<img src="" class="shield-logo">
-			<div class="shield-title">A performance venue. A community space. A Greener Fringe.</div>
-			<div class="shield-description">The Greenhouse is a zero-waste performance venue at the heart of the Edinburgh Fringe. Creating and hosting 8 shows – from storytelling to family theatre, dance to straight drama – all inviting you to discuss the environment, and our relationship to it. Our programme of workshops provide a fun and practical space to explore implementing sustainability in to artistic practice or daily life. Environmental events plus live music every night creates a relaxed space to unwind and share thoughts with other artists. This project is about a sense of community – and generating grassroots, artist-led change towards a more sustainable future. So what are you waiting for? Come on in.</div>
+		<div class="shield-content right">
+            <!--<img src="https://www.immersionrecovery.com/wp-content/uploads/2018/10/best-twitter-bird-transparent-background-esec-fse-2017-twitter-bird-transparent-background.png" class="shield-logo">-->
+			<div class="shield-title">A performance venue. A community space.<br><i>A Greener Fringe</i>.</div>
+			<div class="shield-description">The Greenhouse is a zero-waste performance venue at the heart of the Edinburgh Fringe. Creating and hosting 8 shows – from storytelling to family theatre, dance to straight drama – all inviting you to discuss the environment, and our relationship to it. Our programme of workshops provide a fun and practical space to explore implementing sustainability in to artistic practice or daily life. Environmental events plus live music every night creates a relaxed space to unwind and share thoughts with other artists. This project is about a sense of community – and generating grassroots, artist-led change towards a more sustainable future. So what are you waiting for? 
+                <br><a class="closetab">Come on in.</a></div>
 		</div>
 	</div>
 </div>
