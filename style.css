@@ -85,6 +85,7 @@ i {
     position:absolute;
     width:70%;
     top:50%;
+    cursor:default;
     -webkit-transform:translate(0%,-50%);
     -ms-transform:translate(0%,-50%);
     transform:translate(0%,-50%);}
