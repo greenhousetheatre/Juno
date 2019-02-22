@@ -165,6 +165,7 @@ a {
     font-family:'Source Sans Pro', sans-serif;
     position:relative;
     margin:0px auto;
+    padding-top:80px;
     background:#efefef;
     z-index:0;}
     .contentbox.work-music {
@@ -185,7 +186,7 @@ a {
     z-index:2;
     width:calc(100vw - 160px);
     padding-bottom:80px;
-    margin:80px 80px 0px 80px;
+    margin:0px 80px 0px 80px;
     background:#efefef;}
     .notpanel:after {
   	content:"";
