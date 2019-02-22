@@ -39,13 +39,14 @@ a {
     border-radius:3px;}
 
 .marshmallow {
-	height:500px;
+	height:440px;
+    background:#efefef;
 	display:block;}
 
 .greet {
 	display:block;
 	position:absolute;
-	top:0px;
+	top:60px;
 	height:500px;
 	width:100%;
 	z-index:1000;
@@ -165,7 +166,6 @@ a {
     font-family:'Source Sans Pro', sans-serif;
     position:relative;
     margin:0px auto;
-    padding-top:80px;
     background:#efefef;
     z-index:0;}
     .contentbox.work-music {
@@ -185,13 +185,9 @@ a {
     .notpanel {
     z-index:2;
     width:calc(100vw - 160px);
-    padding-bottom:80px;
+    padding:80px 0px;
     margin:0px 80px 0px 80px;
     background:#efefef;}
-    .notpanel:after {
-  	content:"";
-  	display:block;
-  	clear:both;}
 .panel p {
     position:relative;
     height:auto;
