@@ -318,6 +318,18 @@ i {
     font-size:1.5em;
     text-align:center;
 	font-style:italic;}
+    /* Headers for Show Pages */
+    .showheader {
+    line-height:150%;
+    position:relative;
+    font-size:1.5em;
+    text-align:center;
+    font-weight:bold;}
+    .subheader {
+    font-size:1.2em;
+    text-align:center;
+    margin-bottom:25px;
+    font-style:italic;}
 
 .person {
     position:relative;
@@ -361,8 +373,8 @@ i {
 .textbox.mission p {
     margin-bottom:40px;}
 .textbox.venue img {
-    max-width:50vw;
-}
+    max-width:50vw;}
+
 .numbered {
     text-align:left;
     font-size:1.25em;
@@ -543,6 +555,34 @@ i {
     margin-top:-10px;
     z-index:-1;}
 
+/* Show Template Styles */
+.showtemplate .box table {
+    margin-top:10px;}
+    .showtemplate .box table i:after {
+    width:100%;
+    padding-right:5px;
+    height:20px;
+    background-color:#fff;
+    display:inline-block;
+    margin-top:-10px;
+    z-index:-1;}
+    .showtemplate .box table i:before {
+    background-color:#bbb;}
+    .showtemplate .textbox {
+    text-align:justify;}
+    .showtemplate .box {
+    overflow:visible;
+    border-radius:none;}
+    .showtemplate img {
+    padding:5px;
+    display:block;
+    position:relative;
+    max-width:calc(100% - 12px);
+    outline:1px solid #bbb;
+    margin:1px 1px 1px 1px;}
+    .showtemplate center.imagepadding {
+    margin:35px 0px 5px 0px;}
+
 /* adding colors bc im a lazy butt */
 .first {
     background-color:#381d26;}
@@ -552,6 +592,9 @@ i {
     background-color:#ad8350;}
 .fact {
     background-color:#a4b1c4;}
+.showtemplate .fact {
+    font-style:italic;
+    background-color:transparent;}
 
 /*
 .first-accent {
