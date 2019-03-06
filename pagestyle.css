@@ -583,6 +583,36 @@ i {
     .showtemplate center.imagepadding {
     margin:35px 0px 5px 0px;}
 
+/*Contact Page*/
+.contact_box {
+  border-radius:5px;
+  background-color:#e0e0e0;
+  padding:50px;
+  text-align:left;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin:6px 0px 16px 0px;
+  resize: vertical;}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    color:white;
+    padding:12px 20px;
+    margin:0 auto;
+    display:block;
+    border:none;
+    font-size:1em;
+    border-radius:4px;
+    cursor:pointer;}
+input[type=submit]:hover {
+    background-color: #ad8350;}
+
+
 /* adding colors bc im a lazy butt */
 .first {
     background-color:#381d26;}
