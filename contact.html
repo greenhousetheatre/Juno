@@ -97,17 +97,17 @@ body {
 	    <p>Say hello to the major productions of the Greenhouse Theatre! We are so excited to show you this wonderful collection of shows, all themed around our relationship with the environment. From storytelling to family theatre to straight drama, there is something for everyone here! All shows have elements of site–specific and immersive theatre ingrained in them, thanks to the nature of our lovely space. They are also all <b>world premieres for the Fringe!</b></p>
 
 	    <div class="contact_box"> 
-	    <form method="post" name="contactus" action="sendmail.php">
-    		<label for="visitor_name">Name</label>
-    		<input type="text" name="visitor_name" placeholder="...">
+	    <form method="post" name="myemailform" action="sendmail.php">
+    		<label for='name'>Name</label>
+    		<input type="text" name="name" placeholder="...">
 
-    		<label for="visitor_email">Email Address</label>
-    		<input type="text" name="visitor_email" placeholder="...">
+    		<label for='email'>Email Address</label>
+    		<input type="text" name="email" placeholder="...">
 
-    		<label for="visitor_subject">Subject</label>
-    		<textarea name="visitor_subject" placeholder="Enter text here" style="height:200px"></textarea>
+    		<label for='message'>Subject</label>
+    		<textarea name="message" placeholder="Enter text here" style="height:200px"></textarea>
 
-    		<input type="submit" value="Submit" class="first">
+    		<input type="submit" name ="submit" value="Submit" class="first">
   		</form>
   		<script language="JavaScript">
 		// Code for validating the form

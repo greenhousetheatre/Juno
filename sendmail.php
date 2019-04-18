@@ -1,14 +1,15 @@
 <?php
-if(!isset($_POST['contactus']))
+if(!isset($_POST['submit']))
 {
+	//This page should not be accessed directly. Need to submit the form.
 	echo "Error: Please submit form!";
 }
-$visitor_name = $_POST['visitor_name'];
-$visitor_email = $_POST['visitor_email'];
-$visitor_subject = $_POST['visitor_subject'];
+$name = $_POST['name'];
+$visitor_email = $_POST['email'];
+$message = $_POST['message'];
 
 //Validate first
-if(empty($visitor_name)||empty($visitor_email)) 
+if(empty($name)||empty($visitor_email)) 
 {
     echo "Error: Please enter your name and email address!";
     exit;
@@ -16,14 +17,13 @@ if(empty($visitor_name)||empty($visitor_email))
 
 if(IsInjected($visitor_email))
 {
-    echo "Error!";
+    echo "Bad email value!";
     exit;
 }
 
 $email_from = "ofgalaxies@gmail.com";
-$email_subject = "Message from $visitor_name for BoxedIn Theatre";
-$email_body = "You have received a new message from $visitor_name, $visitor_email.\n".
-	"Here is the message:\n $visitor_subject";
+$email_subject = "Message for BoxedIn Theatre";
+$email_body = "You have received a new message from $name, $visitor_email:\n $message".
     
 $to = "ofgalaxies@gmail.com";
 $headers = "From: $email_from \r\n";
@@ -31,6 +31,8 @@ $headers .= "Reply-To: $visitor_email \r\n";
 mail($to,$email_subject,$email_body,$headers);
 header('Location: thankyou.html');
 
+
+// Function to validate against any email injection attempts
 function IsInjected($str)
 {
   $injections = array('(\n+)',
