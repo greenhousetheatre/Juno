@@ -1,11 +1,11 @@
 <?php
-if(!isset($_POST['submit']))
+if(!isset($_POST['contactus']))
 {
 	echo "Error: Please submit form!";
 }
-$visitor_name = $_POST['name'];
-$visitor_email = $_POST['email'];
-$visitor_subject = $_POST['message'];
+$visitor_name = $_POST['visitor_name'];
+$visitor_email = $_POST['visitor_email'];
+$visitor_subject = $_POST['visitor_subject'];
 
 //Validate first
 if(empty($visitor_name)||empty($visitor_email)) 
@@ -16,7 +16,7 @@ if(empty($visitor_name)||empty($visitor_email))
 
 if(IsInjected($visitor_email))
 {
-    echo "Bad email value!";
+    echo "Error!";
     exit;
 }
 
