@@ -25,7 +25,7 @@ $email_subject = "Message from $visitor_name for BoxedIn Theatre";
 $email_body = "You have received a new message from $visitor_name, $visitor_email.\n".
 	"Here is the message:\n $visitor_subject".
     
-$to = "tom@amazing-designs.com";
+$to = "ofgalaxies@gmail.com";
 $headers = "From: $email_from \r\n";
 $headers = "Reply-To: $visitor_email \r\n";
 mail($to,$email_subject,$email_body,$headers);
