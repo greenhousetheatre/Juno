@@ -1,6 +1,21 @@
+<?php
+
+if($_POST["submit"]) {
+    $recipient="info@boxedintheatre.com";
+    $subject="Form to email message";
+    $sender=$_POST["user_name"];
+    $senderEmail=$_POST["user_mail"];
+    $message=$_POST["user_message"];
+
+    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
+
+    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
+
+    $thankYou="<p>Thank you! Your message has been sent.</p>";
+} ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-<title>The Greenhouse Theatre: Mission</title>
+<title>The Greenhouse Theatre: Creatives</title>
     
     <link rel="shortcut icon" href="https://i.imgur.com/qA1WgW0.png"/>
     <link rel="stylesheet" type="text/css" href="pagestyle.css"/>
@@ -33,6 +48,55 @@ body {
     -moz-transition: all 0.4s linear;
     -o-transition: all 0.4s linear;
     transition: all 0.4s linear;}
+    
+    form {
+  /* Just to center the form on the page */
+  margin: 0 auto;
+  width: 90%;
+  /* To see the outline of the form */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+}
+
+form div + div {
+  margin-top: 1em;
+}
+
+label {
+  /* To make sure that all labels have the same size and are properly aligned */
+  display: inline;
+  width: 90px;
+  text-align: right;
+}
+
+input, textarea {
+  font: 1em sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+  border-color: #000;
+}
+
+textarea {
+  vertical-align: top;
+  height: 5em;
+}
+
+input[type=submit] {
+  background-color: #e6b372;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 100%;
+  align: 
+}
 </style></head>
  
 <body>
@@ -73,7 +137,7 @@ body {
         </div></div>
     <a class="no" href="https://boxedintheatre.com/blog/">Blog</a>
     <a class="no" href="/initiative.html">Initiative</a>
-</div> 
+</div>  
     <div class="clickmenu">
         <div class="line red"></div>
         <div class="line orange"></div>
@@ -83,33 +147,40 @@ body {
 <div class="spacer"></div>
 
 <div class="contentbox">
-	<div class="textbox mission">
+	<div class="textbox">
 	    <div class="header">
-	        The Greenhouse - from the ground up
+	        Contact Us
 	    </div>
-	    <p>The concept is simple. The execution, a little less so. Build a venue entirely out of found and recycled materials, and use it to host 8 shows for a month. Without any electricity of course.
-</p>
-		<p><div class="numbered"> The Premise</div>
-		<div style="text-align:left">Right now, the venue is simply an idea &mdash; we&rsquo;ll be building it in July, ready for a month full of fun and excitement in August. Keep an eye out on this page for photos and videos as the process moves on. But for now, we&rsquo;re going with an idea.<br><br>The skeleton for The Greenhouse will be a square of triangular lighting truss, with sides of 7m. The structure will be around 2.5m high, with a total footprint of 49m<sup>2</sup>. We will then be using the skeleton to support an octagonal structure made mostly out of wood and old sails from ships. This will go on the inside of the square, and take up roughly 36m<sup>2</sup>. <br><br>We anticipate that the capacity for the venue will be between 30 and 50 &mdash; seats will be made out of more found and recycled materials!<br><br>Sounds nice and simple doesn&rsquo;t it? Don&rsquo;t worry, we&rsquo;ve got some pictures below just to clarify ;)
-		</div>
-
-
-		<p><div class="numbered">Access</div>
-		<div style="text-align:left">While we&rsquo;re here, we&rsquo;d like to talk a bit about accessibility. The venue will be completely accessible &mdash; we&rsquo;ve got a whole <a href="http://www.thegreenhousetheatre.com/access.html">section of our website dedicated to that</a>, so head over there to find out more. As well as that, tickets to all of our shows will cost just &pound;5 &mdash; and there are bulk discounts. Feel free to <a href="http://www.thegreenhousetheatre.com/contact.html">contact us</a> if you have any questions!</p>
+	    <p>Like what we're doing? Got some questions? Just feel like saying hi? Awesome - drop us a line here, and we'll get back to you as soon as we can!</p>
+	    
+<form action="contact.php" method="post">
+  <div>
+    <label for="name">Name:</label>
+    <input name="user_name">
+  </div>
+  <div>
+    <label for="mail">E-mail:</label>
+    <input name="user_mail">
+  </div>
+  <div>
+    <label for="msg">Message:</label>
+    <textarea name="user_message"></textarea>
+  </div>
+  <div class="button">
+  <input type="submit" name="submit" value="Hit us up!">
 </div>
-<img src="assets/images/Concept.png" style="width:500px;height:400px;">
-<br>Designer's rendering of the venue, clearly showing the key elements of structural and roof design.<br><br><br>
-<img src="assets/images/Concept2.png" style="width:500px;height:400px;">
-<br>A sketch that more clearly shows the skeleton of the structure, made out of lighting truss.<br><br><br>
-</div>
+</form>
 
-	<div class="credits">
+<?=$thankYou ?>
+	    
+	    
+</div><div class="credits">
 	    <div class="star">
 	    &diams;</div>
 	    <a href="https://www.facebook.com/The-Greenhouse-by-BoxedIn-Theatre-2197180407189597/"> <img src="/assets/images/facebook.png" style="width:40px;height:40px;"> </a>&nbsp;&nbsp;
 	    <a href="https://twitter.com/greenhouse_BI/"> <img src="/assets/images/twitter.png" style="width:40px;height:40px;"> </a>&nbsp;&nbsp;
 	   <a href="https://www.instagram.com/thegreenhouseboxedin/"> <img src="/assets/images/instagram.png" style="width:40px;height:40px;"> </a>
 	    <div style="float:right">Designed by Mia Ferraiolo<br><b>&copy; Greenhouse Theatre</b></div>
-	</div>
+	</div></div></div>
 
 </body></html>

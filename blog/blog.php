@@ -33,6 +33,7 @@ body {
     -moz-transition: all 0.4s linear;
     -o-transition: all 0.4s linear;
     transition: all 0.4s linear;}
+
 </style></head>
  
 <body>
@@ -53,15 +54,14 @@ body {
         <div class="more-links bravo">
             <a href="/mission.html">Mission Statement</a>
             <div class="break"></div>
-            <a href="/creatives.html">Our Team</a>
+            <a href="/management.html">BoxedIn Theatre</a>
+            <div class="break"></div>
+            <a href="/creatives.html">Content Creators</a>
             <div class="break"></div>
             <a href="/venue.html">The Venue</a>
             <div class="break"></div>
             <a href="/contact.php">Contact</a>
-            <div class="break">
-            <a href="/management.html">BoxedIn Theatre</a>
             <div class="break"></div>
-            </div>
         </div></div>
     <div class="mini-menu how"><div class="no how">Resources</div>
         <div class="more-links charlie">
@@ -71,7 +71,7 @@ body {
             <div class="break"></div>
             <a href="/brochure.html">E-brochure</a>
         </div></div>
-    <a class="no" href="https://boxedintheatre.com/blog/">Blog</a>
+    <a class="no" href="/blog.html">Blog</a>
     <a class="no" href="/initiative.html">Initiative</a>
 </div> 
     <div class="clickmenu">
@@ -83,25 +83,8 @@ body {
 <div class="spacer"></div>
 
 <div class="contentbox">
-	<div class="textbox mission">
-	    <div class="header">
-	        The Greenhouse - from the ground up
-	    </div>
-	    <p>The concept is simple. The execution, a little less so. Build a venue entirely out of found and recycled materials, and use it to host 8 shows for a month. Without any electricity of course.
-</p>
-		<p><div class="numbered"> The Premise</div>
-		<div style="text-align:left">Right now, the venue is simply an idea &mdash; we&rsquo;ll be building it in July, ready for a month full of fun and excitement in August. Keep an eye out on this page for photos and videos as the process moves on. But for now, we&rsquo;re going with an idea.<br><br>The skeleton for The Greenhouse will be a square of triangular lighting truss, with sides of 7m. The structure will be around 2.5m high, with a total footprint of 49m<sup>2</sup>. We will then be using the skeleton to support an octagonal structure made mostly out of wood and old sails from ships. This will go on the inside of the square, and take up roughly 36m<sup>2</sup>. <br><br>We anticipate that the capacity for the venue will be between 30 and 50 &mdash; seats will be made out of more found and recycled materials!<br><br>Sounds nice and simple doesn&rsquo;t it? Don&rsquo;t worry, we&rsquo;ve got some pictures below just to clarify ;)
-		</div>
-
-
-		<p><div class="numbered">Access</div>
-		<div style="text-align:left">While we&rsquo;re here, we&rsquo;d like to talk a bit about accessibility. The venue will be completely accessible &mdash; we&rsquo;ve got a whole <a href="http://www.thegreenhousetheatre.com/access.html">section of our website dedicated to that</a>, so head over there to find out more. As well as that, tickets to all of our shows will cost just &pound;5 &mdash; and there are bulk discounts. Feel free to <a href="http://www.thegreenhousetheatre.com/contact.html">contact us</a> if you have any questions!</p>
-</div>
-<img src="assets/images/Concept.png" style="width:500px;height:400px;">
-<br>Designer's rendering of the venue, clearly showing the key elements of structural and roof design.<br><br><br>
-<img src="assets/images/Concept2.png" style="width:500px;height:400px;">
-<br>A sketch that more clearly shows the skeleton of the structure, made out of lighting truss.<br><br><br>
-</div>
+    <br><br>
+<iframe width="100%" height="750" frameborder="0" class="rssdog" src="https://www.rssdog.com/index.php?url=http%3A%2F%2Fboxedintheatre.com%2Ffeed&mode=html&showonly=&maxitems=5&showdescs=1&desctrim=0&descmax=0&tabwidth=100%25&linktarget=_blank&textsize=inherit&bordercol=%23d4d0c8&headbgcol=%23999999&headtxtcol=%23ffffff&titlebgcol=%23f1eded&titletxtcol=%23000000&itembgcol=%23ffffff&itemtxtcol=%23000000&ctl=0"></iframe>
 
 	<div class="credits">
 	    <div class="star">

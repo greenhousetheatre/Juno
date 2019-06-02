@@ -276,7 +276,7 @@ i {
     background:#000;
     background-attachment:fixed;
     background-position:top center;
-    background-size: 100% 100%;
+    background-size:100% auto;
     background-image:url("/assets/images/smallheader.jpg");}
 
 .contentbox {
