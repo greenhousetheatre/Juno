@@ -1,0 +1,730 @@
+<style type="text/css">
+
+body {
+    margin:0px;
+    padding:0px;
+    background-color:#000;
+    line-height:150%;
+    letter-spacing:0.2px;
+    font-family:'Source Sans Pro', calibri, sans-serif;]
+    color:#000;
+  	overflow-y: scroll;
+  	overflow-x: hidden;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    transition: all 0.4s linear;}
+.first {
+    background-color:#381d26;}
+    .second, .clicky.clicked {
+    background-color:#764134;}
+    .third, .clicky.clicked:hover {
+    background-color:#ad8350;}
+a {
+    color:#ad8350;
+    text-decoration:none;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;}
+    a:hover {
+    color:#000;
+    cursor:help;
+    text-decoration:none;}   
+
+b {
+    font-weight:700 !important;}
+i {
+    font-style:italic !important;}
+sup { 
+    vertical-align: super;
+    font-size: smaller;}
+
+#s-m-t-tooltip {
+    position:absolute;
+    margin:15px 10px;
+    padding:2px 6px;
+    z-index:99999999999999;
+    font-size:1.1em;
+    color:#fff;
+    font-family:'Source Sans Pro', sans-serif;
+    background:#222;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    -o-border-radius:3px;
+    border-radius:3px;}
+
+/* Floating Navigation Bar, Associated Styling, Scrolling Target Tags */
+#navbar {
+    display:block;
+    position:fixed;
+    line-height:20px;
+    z-index:99999;
+    padding:20px 100px;
+    left:0px;
+    right:0px;
+    top:0px;
+    background:#000;
+    text-align:center;
+    text-transform:uppercase;
+    font-size:1.6em;}
+    .no {
+    position:relative;
+    letter-spacing:0.5px;
+    line-height:20px;
+    display:inline-block;
+    margin:0px 30px;
+    color:#fff;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    transition: all 0.4s linear;}
+    .no:hover {
+    color:#fff;}
+    .no:after {
+    position:absolute;
+    content:"";
+    background:#fff;
+    z-index:-1;
+    top:-22px;
+    height:2px;
+    left:0px;
+    width:100%;
+    opacity:0;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    transition: all 0.4s linear;}
+    .no:hover:after {
+    opacity:1;
+    top:-7px;}
+
+.mini-menu {
+    display:inline-block;
+    line-height:20px;
+    height:20px;
+    padding:20px;
+    margin:-20px;
+    position:relative;}
+	.break {
+	display:block;
+	margin:0 auto;
+	height:1px;
+	background:#000;}
+
+.more-links {
+	height:0px;
+	position:absolute;
+	left:50%;
+	margin-left:-70px;
+	width:140px;
+	margin-top:20px;
+    background:rgba(0,0,0,0.85);
+	overflow:hidden;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    transition: all 0.4s linear;}
+	.mini-menu:hover .more-links.alpha {
+	height:163px;}
+    .more-links.alpha:hover {
+    overflow:visible;
+    -webkit-transition-delay:0.4s;
+    -moz-transition-delay:0.4s;
+    -o-transition-delay:0.4s;
+    transition-delay:0.4s;}
+	.mini-menu:hover .more-links.bravo {
+	height:204px;}
+    .mini-menu:hover .more-links.charlie {
+    height:123px;}
+	.is-sticky .mini-menu .more-links {
+	margin-top:20px;}
+	.more-links a {
+    color:#fff;
+    cursor:help;
+	display:block;
+	padding:10px 0px;
+	position:relative;
+	font-size:0.8em;}
+	.more-links a:hover {
+	background:#000;}
+	.how {
+	cursor:default;}
+	.how:hover .no:after {
+    opacity:1;
+    top:-12px;
+    width:100%;}
+	.is-sticky .how:hover .no:after {
+    top:-7px;}
+
+    /* Making the navbar into a side panel upon resizing and yes it is as big of a disaster as this section title suggests */
+    @media only screen and (max-width: 900px) {
+        #navbar {
+        padding:80px 30px 30px 30px;
+        width:200px;
+        right:auto;
+        left:-260px;
+        height:100%;
+        bottom:0px;
+        overflow:hidden;
+        text-align:left;
+        -webkit-transition: all 0.4s linear;
+        -moz-transition: all 0.4s linear;
+        -o-transition: all 0.4s linear;
+        transition: all 0.4s linear;}
+        #navbar.clicked {
+        left:0px;}
+        body.clicked {
+        margin-right:-260px;
+        margin-left:260px;}
+        .no, .mini-menu {
+        padding:0px 0px 0px 0px;
+        width:200px;
+        margin:0px;
+        display:block;
+        height:auto;}
+        .no {
+        padding:20px 0px 0px 0px;}
+        .no:after {
+        display:none;}
+        .no:hover {
+        color:#aaa;}
+        .no.how:hover {
+        color:#fff;}
+        .more-links {
+        margin:0px;
+        left:0%;
+        width:auto;
+        position:relative;}
+        .more-links a {
+        font-size:0.8em;
+        text-transform:lowercase;
+        display:inline-block;
+        padding:0px 10px 0px 0px;}
+        .more-links a:hover {
+        color:#aaa;}
+        .break, .yeet {
+        display:none;}
+
+        .more-links.alpha, .more-links.bravo, .more-links.charlie {
+        height:auto !important;}
+
+        .clickmenu {
+            z-index:10000000000000001;
+            position:fixed;
+            top:25px;
+            left:30px;
+            width:35px;
+            cursor:help;
+            height:25px;
+            display:inline-block;}
+            .clickmenu.clicked {
+            background:transparent;}
+            .clickmenu.clicked .line {
+            background:#fff;}
+            .clickmenu.clicked .orange {
+            background:black;
+            opacity:0;}
+            .line {
+            display:block;
+            position:absolute;
+            background:#fff;
+            height:6px;
+            width:45px;
+            border:2px solid #000;
+            cursor:help;
+            -webkit-border-radius:4px;
+            -moz-border-radius:4px;
+            -ms-border-radius:4px;
+            -o-border-radius:4px;
+            border-radius:4px;
+            -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease;}
+            .orange {
+            margin-top:12px;}
+            .yellow {
+            margin-top:24px;}
+            .red.spin {
+            margin-top:14px;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);}
+            .orange.spin {
+            margin-top:5px;
+            opacity:0;}
+            .yellow.spin {
+            margin-top:14px;
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);}}
+@media only screen and (max-width: 700px) {
+        body.clicked {
+        padding-left:0px;}
+    }
+
+.spacer {
+    padding-top:100px;
+    background:red;
+    display:block;
+    position:relative;
+    height:100px;
+    width:100%;
+    z-index:1000;
+    background:#222;
+    background-attachment:fixed;
+    background-position:top center;
+    background-size: 100% 100%;
+    background-image:url("/assets/images/smallheader.jpg");}
+
+.contentbox {
+    position:relative;
+    margin:0px auto;
+    background:#fff;
+    z-index:0;}
+
+/* Panel Content and Styles for Unique Panels */
+.textbox {
+    position:relative;
+    display:block;
+    z-index:0;
+    font-size:1.35em;
+    text-align:center;
+    padding:50px 100px;
+    margin:0 auto;
+    line-height:175%;
+    max-width:50vw;}
+    @media only screen and (max-width: 1000px) {
+        .textbox {
+        max-width:75vw;}}
+    @media only screen and (max-width: 750px) {
+        .textbox {
+        padding:50px 50px;}}
+.textbox p {
+    position:relative;
+    height:auto;
+    margin:10px 0px;}
+    .panel p:first-child {
+    margin-top:0px;}
+    .panel p:last-child {
+    margin-bottom:0px;}
+
+.header {
+    line-height:150%;
+    position:relative;
+    margin-bottom:25px;
+    font-size:1.5em;
+    text-align:center;
+	font-style:italic;}
+    /* Headers for Show Pages */
+    .showheader {
+    line-height:150%;
+    position:relative;
+    font-size:1.5em;
+    text-align:center;
+    font-weight:bold;}
+    .subheader {
+    font-size:1.2em;
+    text-align:center;
+    margin-bottom:25px;
+    font-style:italic;}
+
+.person {
+    position:relative;
+    display:block;
+    padding:30px 0px;
+    min-height:126px;
+    border-bottom:2px solid #ccc;}
+    .person:last-of-type {
+    border-bottom:none;}
+    .person img {
+    width:100px;
+    border-radius:50%;
+    border:10px solid #ccc;
+    padding:3px;}
+    .person.left {
+    text-align:left;}
+    .person.left img {
+    float:left;
+    margin-right:13px;}
+    .person.right {
+    text-align:right;}
+    .person.right img {
+    float:right;
+    margin-left:13px;}
+    .person-name {
+    font-weight:bold;
+    font-size:1.25em;
+    margin-bottom:12px;}
+    .person-role {
+    display:inline-block;
+    font-style:italic;}
+    .person.left {
+    padding-left:136px;}
+    .person.left img {
+    margin-left:-136px;}
+    .person.right {
+    padding-right:136px;}
+    .person.right img {
+    margin-right:-136px;}
+
+.textbox.mission p {
+    margin-bottom:20px;}
+    .textbox.mission p:last-of-type {
+    margin-bottom:40px;}
+.textbox.venue img {
+    max-width:50vw;}
+
+.numbered {
+    text-align:left;
+    font-size:1.25em;
+    margin-bottom:10px;}
+    .numbered b {
+    font-weight:700;}
+    .numbered-text {
+    text-align:left;
+    position:relative;
+    padding-left:20px;
+    border-left:2px solid #ddd;
+    margin-left:20px;}
+    .numbered-text:after {
+    content:"";
+    width:2px;
+    height:0%;
+    top:0px;
+    left:-2px;
+    position:absolute;
+    background:#aaa;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;}
+    .numbered-text:hover:after {
+    height:100%;}
+
+.box {
+    position:relative;
+    display:block;
+    margin:20px auto;
+    text-align:left;
+    background:#ccc;
+    border-radius:5px;
+    overflow:hidden;}
+    .box p {
+    position:relative;
+    height:auto;
+    margin:10px 0px;}
+    .box p:last-child {
+    margin-bottom:0px;}
+    .box p:first-child {
+    margin-top:0px;}
+
+.time-slot, .ws-label {
+    position:relative;
+    padding:25px;
+    text-transform:uppercase;
+    text-align:left;
+    color:#fff;
+    line-height:20px;
+    font-size:1.25em;
+    color:#fff;
+    background:#888;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    transition: all 0.4s linear;}
+    .ws-label {
+    display:inline-block;
+    width:30%;
+    padding:20px 25px;}
+    .ws.description {
+    background:#ccc;
+    float:right;
+    width:calc(70% - 100px);
+    display:inline-block;
+    padding:20px 25px;}
+    .time-slot {
+    cursor:help;}
+    .time-slot:before, .time-slot:after {
+    content:"";
+    position:absolute;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;}
+    .time-slot:after {
+    height:20px;
+    width:20px;
+    top:50%;
+    margin-top:-10px;
+    right:30px;
+    z-index:1000;
+    display:block;
+    opacity:0;
+    background:#fff;}
+    .time-slot:hover:after, .time-slot.banana:after {
+    opacity:1;}
+    .time-slot:before {
+    height:24px;
+    width:24px;
+    border:2px solid white;
+    z-index:1001;
+    top:50%;
+    margin-top:-14px;
+    right:26px;}
+    .mini {
+    font-style:italic;
+    letter-spacing:.5px;
+    position:relative;
+    line-height:20px;
+    text-transform:none;
+    font-size:0.85em;}
+    .ws-label .mini {
+    padding-top:15px;}
+
+/* Workshops HTML */
+    
+.box-content {
+    display:none;}
+.details {
+    overflow:hidden;}
+    .fact {
+    display:inline-block;
+    float:left;
+    margin:0px -1px 0px -1px;
+    width:calc(50% - 40px);
+    padding:15px 20px;
+    line-height:20px;
+    color:#000;
+    text-align:center;
+    border:1px solid #fff;
+    background:#a9a9a9;}
+    @media only screen and (max-width: 750px) {
+        .fact {
+        width:calc(100% - 40px);}
+        .fact:nth-of-type(2) {
+        margin:-1px -1px 0px -1px;}}
+.description {
+    position:relative;
+    padding:25px;
+    line-height:160%;}
+
+/* Styling schedule tables (cast/crew) */
+.box table {
+    width:50%;
+    position:relative;
+    display:inline-block;}
+    .box table.crew {
+    float:right;}
+    @media only screen and (max-width: 750px) {
+        .box table {
+        width:100%;}
+        .box table.crew {
+        margin-top:10px;
+        float:none;}
+        .box table tr.empty {
+        display:none;}
+    }
+.box table td {
+    position:relative;
+    z-index:1;}
+    .box table td:nth-of-type(1), .box table td:nth-of-type(4) {
+    padding-right:5px;
+    width:120px;}
+.box table i {
+    position:relative;
+    display:inline-block;}
+    .box table i:before, .box table i:after {
+    content:"";
+    position:absolute;
+    top:50%;
+    left:0px;}
+    .box table i:before {
+    width:120px;
+    height:1px;
+    background-color:#888;
+    margin-top:-0.5px;
+    z-index:-2;}
+    .box table i:after {
+    width:100%;
+    padding-right:5px;
+    height:20px;
+    background-color:#ccc;
+    display:inline-block;
+    margin-top:-10px;
+    z-index:-1;}
+
+/* Show Template Styles */
+.showtemplate .box table {
+    margin-top:10px;}
+    .showtemplate .box table i:after {
+    width:100%;
+    padding-right:5px;
+    height:20px;
+    background-color:#fff;
+    display:inline-block;
+    margin-top:-10px;
+    z-index:-1;}
+    .showtemplate .box table i:before {
+    background-color:#bbb;}
+    .showtemplate .textbox {
+    text-align:justify;}
+    .showtemplate .box {
+    overflow:visible;
+    border-radius:none;}
+    .showtemplate img {
+    padding:5px;
+    display:block;
+    position:relative;
+    max-width:calc(100% - 12px);
+    outline:1px solid #bbb;
+    margin:1px 1px 1px 1px;}
+    .showtemplate center.imagepadding {
+    margin:35px 0px 5px 0px;}
+
+/* Reformatting the workshop boxes */
+.why {
+    padding-left:85px;
+    display:block;}
+    .why:first-of-type {
+    font-weight:bold;}
+    .why:nth-of-type(2) {
+    text-align:center;
+    width:80px;
+    position:absolute;
+    padding-left:0px;
+    left:15px;
+    top:25px;
+    font-size:0.9em;}
+        .why sup {
+        position:absolute;
+        margin-top:-4px;
+        margin-left:0px;
+        font-size:calc(100% - 60%);}
+        .why .date {
+        display:block;
+        position:relative;
+        padding-right:10px;
+        font-size:1.7em;
+        font-weight:bold;}
+    .why:nth-of-type(3) {
+    text-transform:none !Important;
+    font-style:italic;
+    font-size:0.9em;}
+
+
+/* adding colors bc im a lazy butt */
+.first {
+    background-color:#381d26;}
+    .second, .clicky.clicked {
+    background-color:#764134;}
+    .third, .clicky.clicked:hover {
+    background-color:#ad8350;}
+.fact {
+    background-color:#a4b1c4;}
+.showtemplate .fact {
+    width:calc(33% - 40px);
+    font-style:italic;
+    background-color:transparent;}
+    @media only screen and (max-width: 750px) {
+        .showtemplate .fact {
+        width:calc(100% - 40px);}
+        .fact:nth-of-type(2) {
+        margin:-1px -1px 0px -1px;}}
+
+/*
+.first-accent {
+    background-color:#a295a8;}
+    .second-accent {
+    background-color:#91a2bc;}
+    .third-accent {
+    background-color:#a4b1c4;}
+Soft pastel vibes
+.first {
+    background-color:#808bba;}
+.second, .clicky.clicked {
+    background-color:#985f6f;}
+.third, .clicky.clicked:hover {
+    background-color:#4e4c67;}
+
+
+
+40587c + a4b1c4 — Storm
+5e7c40 + b8c4a4 — Forest green
+592e6d + 855a99 — Purple
+
+*/
+
+/* Credit Panel and End Hover Animation */
+.credits {
+    position:relative;
+    display:block;
+ 	background:#000;
+    padding:40px 40px;
+    height:30px;
+    line-height:15px;
+    color:#fff;
+    text-align:left;
+    font-size:13px;}
+    .star {
+    position:absolute;
+    display:block;
+    color:transparent;
+    top:40px;
+    left:calc(50% - 15px);
+    border-radius:50%;
+    width:19px;
+    padding-left:1px;
+    height:20px;
+    line-height:21px;
+    text-align:center;
+    box-shadow: 4px 3px 0px 0px #fff;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    transition: all 0.4s linear;}
+    .credits:hover .star {
+    top:45px;
+    color:#fff;
+    left:calc(50% - 10px);
+    box-shadow: 0px 0px 0px 1px #fff;}
+    
+.credits img {
+    display:inline-block; 
+    width:30px;
+    height:30px;
+    margin-right:5px;}
+
+
+@media only screen and (max-width: 900px) {
+    #navbar {
+    padding-top:50px;
+    font-size:2.3em;
+    left:-410px;}
+    body.clicked {
+    margin-right:-410px;
+    margin-left:410px;}
+    .textbox {
+    font-size:1.6em;}
+    .box {
+    font-size:0.8em;}
+    .credits {
+    font-size:1.4em;}
+    .credits .star {
+    display:none;}
+    #navbar, .no, .mini-menu {
+    width:350px;
+    line-height:150%;}
+    .notpanel {
+    width:calc(100vw - 100px);
+    padding-bottom:50px;
+    margin:50px 50px 0px 50px;}}
+</style>
