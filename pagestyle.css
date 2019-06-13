@@ -36,6 +36,9 @@ b {
     font-weight:700 !important;}
 i {
     font-style:italic !important;}
+sup { 
+    vertical-align: super;
+    font-size: smaller;}
 
 #s-m-t-tooltip {
     position:absolute;
@@ -273,7 +276,7 @@ i {
     height:100px;
     width:100%;
     z-index:1000;
-    background:#000;
+    background:#222;
     background-attachment:fixed;
     background-position:top center;
     background-size: 100% 100%;
@@ -371,6 +374,8 @@ i {
     margin-right:-136px;}
 
 .textbox.mission p {
+    margin-bottom:20px;}
+    .textbox.mission p:last-of-type {
     margin-bottom:40px;}
 .textbox.venue img {
     max-width:50vw;}
@@ -484,6 +489,8 @@ i {
     font-size:0.85em;}
     .ws-label .mini {
     padding-top:15px;}
+
+/* Workshops HTML */
     
 .box-content {
     display:none;}
@@ -582,6 +589,37 @@ i {
     margin:1px 1px 1px 1px;}
     .showtemplate center.imagepadding {
     margin:35px 0px 5px 0px;}
+
+/* Reformatting the workshop boxes */
+.why {
+    padding-left:85px;
+    display:block;}
+    .why:first-of-type {
+    font-weight:bold;}
+    .why:nth-of-type(2) {
+    text-align:center;
+    width:80px;
+    position:absolute;
+    padding-left:0px;
+    left:15px;
+    top:25px;
+    font-size:0.9em;}
+        .why sup {
+        position:absolute;
+        margin-top:-4px;
+        margin-left:0px;
+        font-size:calc(100% - 60%);}
+        .why .date {
+        display:block;
+        position:relative;
+        padding-right:10px;
+        font-size:1.7em;
+        font-weight:bold;}
+    .why:nth-of-type(3) {
+    text-transform:none !Important;
+    font-style:italic;
+    font-size:0.9em;}
+
 
 /* adding colors bc im a lazy butt */
 .first {
