@@ -669,8 +669,8 @@ Soft pastel vibes
     display:block;
  	background:#000;
     padding:40px 40px;
-    height:20px;
-    line-height:20px;
+    height:30px;
+    line-height:15px;
     color:#fff;
     text-align:left;
     font-size:13px;}
@@ -678,7 +678,7 @@ Soft pastel vibes
     position:absolute;
     display:block;
     color:transparent;
-    top:35px;
+    top:40px;
     left:calc(50% - 15px);
     border-radius:50%;
     width:19px;
@@ -692,10 +692,17 @@ Soft pastel vibes
     -o-transition: all 0.4s linear;
     transition: all 0.4s linear;}
     .credits:hover .star {
-    top:40px;
+    top:45px;
     color:#fff;
     left:calc(50% - 10px);
     box-shadow: 0px 0px 0px 1px #fff;}
+    
+.credits img {
+    display:inline-block; 
+    width:30px;
+    height:30px;
+    margin-right:5px;}
+
 
 @media only screen and (max-width: 900px) {
     #navbar {
@@ -720,7 +727,4 @@ Soft pastel vibes
     width:calc(100vw - 100px);
     padding-bottom:50px;
     margin:50px 50px 0px 50px;}}
-    
-.social-icon{display:inline-block; width:60px; ;}
-
 </style>
