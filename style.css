@@ -23,6 +23,8 @@ a {
     color:#555;
     cursor:help;
     text-decoration:none;}   
+    b {
+    font-weight:bold;}
 
 i {
     font-style:italic;}
@@ -192,14 +194,6 @@ i {
     -moz-transition: all 0.4s linear;
     -o-transition: all 0.4s linear;
     transition: all 0.4s linear;}
-    .mini-menu:hover .more-links.alpha {
-    height:163px;}
-    .more-links.alpha:hover {
-    overflow:visible;
-    -webkit-transition-delay:0.4s;
-    -moz-transition-delay:0.4s;
-    -o-transition-delay:0.4s;
-    transition-delay:0.4s;}
     .mini-menu:hover .more-links.bravo {
     height:204px;}
     .mini-menu:hover .more-links.charlie {
@@ -310,6 +304,9 @@ i {
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;}
 	.charimg {
+    background:#bbb;
+    height:auto;
+    height:calc(33.3vw - 95px);
     width:calc(33.3% - 40px);}
 	.wideimg {
     width:calc(100% - 40px);}
