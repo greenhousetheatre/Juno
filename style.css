@@ -309,8 +309,12 @@ i {
     height:calc(33.3vw - 95px);
     width:calc(33.3% - 40px);}
 	.wideimg {
+    height:auto;
+    height:calc(33.3vw - 95px);
     width:calc(100% - 40px);}
 	.doubleimg {
+    height:auto;
+    height:calc(33.3vw - 95px);
     width:calc(50% - 40px);}
 .char {
     display:block;
