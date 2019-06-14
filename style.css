@@ -50,7 +50,7 @@ i {
     bottom:0px;
     left:0px;
     right:0px;
-    z-index:9999999999999;
+    z-index:10000000000000002;
     color:#fff;
     font-size:1.5em;
     line-height:150%;
@@ -58,7 +58,7 @@ i {
     .shield.bye {
     bottom:auto;}
     .shield-panel {
-    z-index:9999999999999;
+    z-index:10000000000000002;
     background:#000;
     height:100%;
     width:50%;
