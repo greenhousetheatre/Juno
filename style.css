@@ -117,7 +117,7 @@ i {
 	height:500px;
 	width:100%;
 	z-index:1000;
-	background:#000;
+	background:#222;
 	background-attachment:absolute;
 	background-position:center center;
     background-size:cover;
@@ -523,6 +523,8 @@ i {
     .event {
     margin:0px;}
     .charimg {
+    height:auto;
+    height:calc(100vw / 3 - 100px / 3);
     width:calc(100% / 3);}
     .wideimg {
     width:100%;}
