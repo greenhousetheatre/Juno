@@ -22,10 +22,6 @@
         		$(".shield-panel.right").addClass("moveright");
                 $(this).addClass("bye");
 			});
-    	});
-	</script>
-
-<!-- 
             $(".mini-menu").hover(function(){
                 $(this).closest(".how").find(".more-links.bravo").css("height", "204px");
                 }, function(){
@@ -35,7 +31,16 @@
                 $(this).closest(".how").find(".more-links.charlie").css("height", "123px");
                 }, function(){
                 $(this).closest(".how").find(".more-links.charlie").css("height", "0px");
-            });-->
+            });
+            $(".event").hover(function(){
+                $(this).closest(".charimg").find(".char").css("opacity", "1");
+                }, function(){
+                $(this).closest(".charimg").find(".char").css("opacity", "0");
+            });
+    	});
+	</script>
+
+<!-- -->
 
 <!-- Isotope is from https://isotope.metafizzy.co/ -->
     <script src="https://static.tumblr.com/6hsqxdt/QBym35odk/jquery.masonry.js"></script><script src="https://static.tumblr.com/fuu6t9w/eubml0pm0/jquery.isotope.min.js"></script>
@@ -139,39 +144,39 @@ body {
             <div class="event event-header">
                 Shows
             </div>
-            <a href="/shows/fromthewind.html"><div class="event charimg">
+            <a class="show" href="/shows/fromthewind.html"><div class="event charimg">
                 <img src="/assets/images/fromthewind.png">
                 <div class="char"><div class="ch-center"><div class="ch-name">From the Wind</div>
                 12:15 &mdash; 12:45 (2nd to 12th)</div></div></div></a>
-            <a href="/shows/evaluation.html"><div class="event charimg">
+            <a class="show" href="/shows/evaluation.html"><div class="event charimg">
                 <img src="/assets/images/evaluation.jpg">
                 <div class="char"><div class="ch-center"><div class="ch-name">Evaluation</div>
                12:15 &mdash; 12:45 (14th to 26th)</div></div></div></a>
-            <a href="/shows/theearthuntold.html"><div class="event charimg">
+            <a class="show" href="/shows/theearthuntold.html"><div class="event charimg">
                 <img src="/assets/images/earthuntold.jpg">
                 <div class="char"><div class="ch-center"><div class="ch-name">The Earth Untold</div>
                 13:15 &mdash; 14:15</div></div></div></a>
-            <a href="/shows/symbiosis.html"><div class="event charimg">
+            <a class="show" href="/shows/symbiosis.html"><div class="event charimg">
                 <img src="/assets/images/symbiosis.png">
                 <div class="char"><div class="ch-center"><div class="ch-name">Symbiosis</div>
                 14:45 &mdash; 15:15</div></div></div></a>
-            <a href="/shows/shellshock.html"><div class="event charimg">
+            <a class="show" href="/shows/shellshock.html"><div class="event charimg">
                 <img src="/assets/images/shellshock.png">
                 <div class="char"><div class="ch-center"><div class="ch-name">Shellshock!</div>
                 15:45 &mdash; 16:45</div></div></div></a>
-            <a href="/shows/daphne.html"><div class="event charimg">
+            <a class="show" href="/shows/daphne.html"><div class="event charimg">
                 <img src="/assets/images/daphne.png">
                 <div class="char"><div class="ch-center"><div class="ch-name">Daphne; or Hellfire</div>
                 17:15 &mdash; 18:15</div></div></div></a>
-            <a href="/shows/theswallow.html"><div class="event charimg">
+            <a class="show" href="/shows/theswallow.html"><div class="event charimg">
                 <img src="/assets/images/theswallow.jpg">
                 <div class="char"><div class="ch-center"><div class="ch-name">Swallows</div>
                 18:45 &mdash; 19:45</div></div></div></a>
-            <a href="/music.html"><div class="event charimg">
+            <a class="show" href="/music.html"><div class="event charimg">
                 <img src="https://78.media.tumblr.com/e6c4454b4dc0d9fb231e2a5a472bc1c8/tumblr_oew4b48Q3y1tjx8dco1_1280.jpg">
                 <div class="char"><div class="ch-center"><div class="ch-name">Music Slot</div>
                20:00 &mdash; 21:00</div></div></div></a>
-            <a href="/shows/voices.html"><div class="event charimg">
+            <a class="show" href="/shows/voices.html"><div class="event charimg">
                 <img src="/assets/images/voices.jpg">
                 <div class="char"><div class="ch-center"><div class="ch-name">The Voices we Hear</div>
                 21:15 &mdash; 21:45</div></div></div></a>

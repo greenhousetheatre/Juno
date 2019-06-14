@@ -332,8 +332,6 @@ i {
     -moz-transition: all 0.3s linear;
     -o-transition: all 0.3s linear;
     transition: all 0.3s linear;}
-    .event:hover .char {
-    opacity:1;}
     .ch-center {
     position:relative;
     font-size:1.1vw;
