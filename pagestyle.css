@@ -31,6 +31,10 @@ a {
     color:#000;
     cursor:help;
     text-decoration:none;}   
+    .contentbox a {
+    border-bottom:1px solid #ad8350;}
+    .contentbox a:hover {
+    border-bottom:5px solid #ad8350;}
 
 b {
     font-weight:700 !important;}

@@ -76,9 +76,6 @@ i {
     left:-50%;}
     .shield-panel.right.moveright {
     right:-50%;}
-    .shield-logo {
-    width:50px;
-    border-radius:50%;}
     .shield-title {
     font-size:1.3em;
     padding:1.5em 0em;
@@ -396,10 +393,11 @@ i {
 
  @media only screen and (max-width: 900px) {
         #navbar {
-        padding:80px 30px 30px 30px;
+        font-size:2.3em;
+        left:-410px;
+        padding:50px 30px 30px 30px;
         width:200px;
         right:auto;
-        left:-260px;
         height:100%;
         bottom:0px;
         overflow:hidden;
@@ -446,7 +444,6 @@ i {
         height:auto !important;}
 
         .clickmenu {
-            z-index:10000000000000001;
             position:fixed;
             top:25px;
             left:30px;
@@ -498,13 +495,14 @@ i {
             -moz-transform: rotate(-45deg);
             -o-transform: rotate(-45deg);
             -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);}}
-
-@media only screen and (max-width: 900px) {
-    #navbar {
-    padding-top:50px;
-    font-size:2.3em;
-    left:-410px;}
+            transform: rotate(-45deg);}
+    .shield-content {
+    font-size:1.2em;
+    width:150%;}
+    .shield-content.left {
+    right:-75%;}
+    .shield-content.right {
+    left:-75%;}
     body.clicked {
     margin-right:-410px;
     margin-left:410px;}
